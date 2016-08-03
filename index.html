@@ -13,7 +13,7 @@
 
 <body class="lf_home">
     <!-- hover_container -->
-    <div class="hover_container">
+    <div class="hover_container" style="display: none">
         <div class="hover_container__inner">
             <!-- lf_interface_logo -->
             <div class="widget lf_interface_logo __hover_container">
@@ -34,7 +34,7 @@
                                 <li><a href="#">Controls</a></li>
                             </ul>
                         </li>
-                        <li>
+                        <li class="menu-item has-sub-menu">
                             <a href="#">About me</a>
                             <ul class="sub-menu">
                                 <li><a href="#">Configuration</a></li>
@@ -42,8 +42,8 @@
                                 <li><a href="#">Controls</a></li>
                             </ul>
                         </li>
-                        <li><a href="#">Our works</a></li>
-                        <li class="search"><a href="#">Search</a></li>
+                        <li class="menu-item"><a href="#">Our works</a></li>
+                        <li class="menu-item search"><a href="#">Search</a></li>
                     </ul>
                 </nav>
             </div>
@@ -51,6 +51,49 @@
         </div>
     </div>
     <!-- /hover_container -->
+    <!-- search_panel -->
+    <div class="search_panel">
+        <form action="/" method="get" accept-charset="utf-8">
+            <input type="search" name="search" class="search_panel__search" value="" placeholder="Here is">
+            <button class="search_panel__close">Close</button>
+        </form>
+        <ul class="search_panel__results">
+            <li class="search_panel__item">
+                <div class="search_panel__thumbnail">
+                    <img class="search_panel__image" src="./images/i-m-g-0055@3x.png" alt="">
+                </div>
+                <div class="search_panel__text">
+                    <h3 class="search_panel__title">Here is will be title</h3>
+                    <div class="search_panel__excerpt">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati atque sit eius, doloribus autem officia! Totam laboriosam quisquam possimus, omnis sequi quod amet reiciendis, nesciunt repudiandae minima illo molestias qui.
+                    </div>
+                </div>
+            </li>
+            <li class="search_panel__item">
+                <div class="search_panel__thumbnail">
+                    <img class="search_panel__image" src="./images/i-m-g-0055@3x.png" alt="">
+                </div>
+                <div class="search_panel__text">
+                    <h3 class="search_panel__title">Here is will be title</h3>
+                    <div class="search_panel__excerpt">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati atque sit eius, doloribus autem officia! Totam laboriosam quisquam possimus, omnis sequi quod amet reiciendis, nesciunt repudiandae minima illo molestias qui.
+                    </div>
+                </div>
+            </li>
+            <li class="search_panel__item">
+                <div class="search_panel__thumbnail">
+                    <img class="search_panel__image" src="./images/i-m-g-0055@3x.png" alt="">
+                </div>
+                <div class="search_panel__text">
+                    <h3 class="search_panel__title">Here is will be title</h3>
+                    <div class="search_panel__excerpt">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati atque sit eius, doloribus autem officia! Totam laboriosam quisquam possimus, omnis sequi quod amet reiciendis, nesciunt repudiandae minima illo molestias qui.
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!-- /search_panel -->
     <!-- SCRIPTS -->
     <script src="./javascripts/jquery-2.2.4.min.js"></script>
     <!-- <script src="./javascripts/bootstrap.min.js"></script> -->
