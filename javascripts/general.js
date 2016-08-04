@@ -16,6 +16,19 @@ jQuery(document).ready(function($) {
     	$bottom_line.css('width', '0');
     });
 
+    //Search button
+    $search_panel = $('.search_panel');
+    $main_menu = $('.main_menu');
+    $('.lf_interface_menu.__hover_container li.search > a').click(function() {
+        $search_panel.toggleClass('opened');
+        $main_menu.toggleClass('closed');
+    });
+    $('.search_panel__close').click(function(e) {
+        e.preventDefault();
+        $search_panel.toggleClass('opened');
+        $main_menu.toggleClass('closed');        
+    });
+
 
 });
 
