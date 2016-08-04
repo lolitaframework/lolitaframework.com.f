@@ -53,6 +53,27 @@ a:focus {
     visibility: hidden;
     padding-top: 128px;
     padding-bottom: 128px;
+    &.menuAnimation {
+        & .menu-main-container {
+            & > ul {
+                & > li {
+                    @include animation( ac-gn-item-searchshow 140ms both);
+                    &:nth-child(0) {
+                        @include animation-delay( 140ms);
+                    }
+                    &:nth-child(1) {
+                        @include animation-delay( 105ms);
+                    }
+                    &:nth-child(2) {
+                        @include animation-delay( 70ms);
+                    }
+                    &:nth-child(3) {
+                        @include animation-delay( 35ms);
+                    }
+                }
+            }
+        }
+    }
     & .menu-main-container {
         & > ul {
             @include clearfix();
@@ -240,7 +261,8 @@ a:focus {
             left: -20px;
         }
         input.search_panel__search {
-            width: 100%;
+            width: 733px;
+            max-width: 100%;
             padding-left: 14px;
             height: 22px;
             line-height: 22px;
@@ -259,7 +281,7 @@ a:focus {
             height: 15px;
             position: absolute;
             top: 0;
-            right: -47px;
+            right: -15px;
         }
     }
     .search_panel__results {
@@ -275,12 +297,12 @@ a:focus {
             text-align: left;
             margin-bottom: 30px;
             .search_panel__thumbnail {
-                margin-right: 12px;
+                margin-right: 17px;
                 .search_panel__image {
                     font-size: 0;
                     display: inline-block;
-                    width: 60px;
-                    height: 60px;
+                    width: 70px;
+                    height: 70px;
                     background-color: #d8d8d8;
                     border: solid 5px #e9e9e9;
                     border-radius: 100%;
@@ -319,7 +341,7 @@ a:focus {
     bottom: 0;
     right: 0;
     left: 0;
-    .main_menu {
+    .front_block {
         align-self: center;
         position: relative;
         min-width: 380px;
