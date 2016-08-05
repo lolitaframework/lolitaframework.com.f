@@ -17,11 +17,13 @@ jQuery(document).ready(function($) {
     });
 
     //Search button
+    $hover_container = $('.hover_container');
     $search_panel = $('.search_panel');
     $front_block = $('.front_block');
     $main_menu = $front_block.find('.lf_interface_menu');
     $('.lf_interface_menu.__hover_container li.search > a').click(function() {
         $main_menu.addClass('menuAnimation').delay(200).queue(function(next) {
+            $hover_container.toggleClass('display_logo');
             $search_panel.toggleClass('opened');
             $front_block.toggleClass('closed');
             $(this).removeClass('menuAnimation');
@@ -30,6 +32,7 @@ jQuery(document).ready(function($) {
     });
     $('.search_panel__close').click(function(e) {
         e.preventDefault();
+        $hover_container.toggleClass('display_logo');
         $search_panel.toggleClass('opened');
         $front_block.toggleClass('closed');        
     });

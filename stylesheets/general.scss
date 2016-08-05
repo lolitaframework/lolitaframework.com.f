@@ -227,6 +227,7 @@ a:focus {
     z-index: -100;
     position: absolute;
     max-width: 100%;
+    background-color: #fff;
     &.opened {
         visibility: visible;
         z-index: 0;
@@ -289,13 +290,29 @@ a:focus {
         list-style: none;
         margin: 0;
         padding: 0;
-        margin-top: 20px;
+        margin-top: 5px;
         .search_panel__item {
             @include clearfix();
-            display: flex;
-            flex-flow: row nowrap;
             text-align: left;
-            margin-bottom: 30px;
+            .search_panel__link {
+                display: flex;
+                flex-flow: row nowrap;
+                text-decoration: none;
+                padding: 15px;
+                margin-left: -15px;
+                margin-right: -15px;
+                &:hover {
+                    background-color: #333333;
+                    .search_panel__text {
+                        .search_panel__title {
+                            color: #fff;
+                        }
+                        .search_panel__excerpt {
+                            color: #fff;
+                        }
+                    }
+                }
+            }
             .search_panel__thumbnail {
                 margin-right: 17px;
                 .search_panel__image {
@@ -341,6 +358,10 @@ a:focus {
     bottom: 0;
     right: 0;
     left: 0;
+    &.display_logo {
+        background: url('../images/logo-footer.svg') left 50% bottom 36px no-repeat;
+        background-size: 94px 52px;
+    }
     .front_block {
         align-self: center;
         position: relative;
@@ -385,7 +406,45 @@ a:focus {
 @media (max-width: $screen-xs-max) {}
 
 //768px - 991px
-@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {}
+@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+    .hover_container {
+        display: block;
+    }
+    .hover_container .front_block {
+        align-self: auto;
+    }
+    .hover_container .front_block .lf_interface_menu {
+        @include opacity(1);
+        visibility: visible;
+        padding: 0;
+        background-color: #333333;
+        height: 44px;
+    }
+    .hover_container .front_block .lf_interface_menu nav {
+        display: none;
+    }
+    .hover_container .front_block button.mb_menu {
+        @include hide-text();
+        display: block;
+        border: 0;
+        outline: 0;
+        position: absolute;
+        width: 17px;
+        height: 12px;
+        top: 16px;
+        right: 15px;
+        background: url('../images/button-line-white.svg') 0 0 no-repeat;
+        background-size: contain;
+    }
+    .lf_interface_menu .menu-main-container>ul>li.search a {
+        display: block;
+        position: absolute;
+        top: 11px;
+        left: 15px;
+        background: url('../images/search-white.svg') 0 0 no-repeat;
+        background-size: contain;
+    }
+}
 
 //992px - 1199px
 @media (min-width: $screen-md-min) and (max-width: $screen-md-max) {}
