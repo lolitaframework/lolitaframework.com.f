@@ -1,0 +1,12 @@
+@import "../../../../scss/core/_variables.scss";
+@import "../../../../scss/core/_mixins.scss";
+
+.w-menu__link.__search {
+	@include hide-text();
+	display: inline-block;
+	width: 15px;
+	height: 22px;
+	background: url('../img/search-black.svg') 0 0 no-repeat;
+	background-size: contain;
+	vertical-align: middle;
+}

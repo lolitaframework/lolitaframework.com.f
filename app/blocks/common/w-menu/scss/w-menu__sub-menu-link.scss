@@ -1,0 +1,11 @@
+@import "../../../../scss/core/_variables.scss";
+@import "../../../../scss/core/_mixins.scss";
+
+.w-menu__sub-menu-link {
+	width: 291px;
+	height: 22px;
+	font-size: 16px;
+	color: #000000;
+	text-decoration: none;
+	font-weight: 100;
+}

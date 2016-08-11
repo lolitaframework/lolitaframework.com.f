@@ -1,0 +1,13 @@
+// Core variables and mixins
+@import "core/variables";
+@import "core/mixins";
+// Reset and dependencies
+@import "core/normalize";
+@import "core/print";
+// Components
+@import "core/typo";
+@import "core/grid";
+// Libs
+@import "core/animations";
+@import "fontawesome/scss/font-awesome.scss";
+

@@ -1,0 +1,22 @@
+@import "../../../../scss/core/_variables.scss";
+@import "../../../../scss/core/_mixins.scss";
+
+.w-menu__item.__has_submenu {
+	position: relative;
+	padding-right: 25px;
+	&:after {
+		content: ' ';
+		display: inline-block;
+		font-size: 0;
+		width: 12px;
+		height: 8px;
+		background: url('../img/arrow-down.svg') 0 0 no-repeat;
+		background-size: contain;
+
+		position: absolute;
+		top: 50%;
+		margin-top: -4px;
+		right: 0;
+		vertical-align: middle;
+	}
+}
