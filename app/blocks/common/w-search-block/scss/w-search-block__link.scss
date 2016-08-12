@@ -1,0 +1,10 @@
+@import "../../../../scss/core/_variables.scss";
+@import "../../../../scss/core/_mixins.scss";
+
+.w-search-block__link {
+	display: block;
+	display: flex;
+	flex-flow: row nowrap;	
+	text-decoration: none;
+	color: #000;
+}

@@ -1,1 +1,1 @@
-.l-front-block__item.w-logo{opacity:1;filter:alpha(opacity=100);visibility:visible;position:relative;align-self:center}
+.l-front-block__item.w-logo{opacity:1;filter:alpha(opacity=100);-webkit-transition:.3s all;-o-transition:.3s all;transition:.3s all;visibility:visible;position:relative;align-self:center}

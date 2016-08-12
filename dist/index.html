@@ -18,7 +18,7 @@
     <!-- l-main-block -->
     <section class="l-full-screen-block">
         <!-- l-front-block -->
-        <div class="l-full-screen-block__item l-front-block">
+        <div class="l-full-screen-block__item l-front-block" style="display:none">
             <!-- b-logo -->
             <div class="l-front-block__item __visible w-logo">
                 <a href="#" class="w-logo__link" style="background-image:url('./img/logo.svg');"></a>
@@ -37,14 +37,72 @@
                                 <li class="w-menu__sub-menu-item"><a href="#" class="w-menu__sub-menu-link">Controls</a></li>
                             </ul>
                         </li>
-                        <li class="w-menu__item"><a href="#" class="w-menu__link">About me</a></li>
-                        <li class="w-menu__item"><a href="#" class="w-menu__link">Our works</a></li>
+                        <li class="w-menu__item __has_submenu">
+                            <a href="#" class="w-menu__link">About me</a>
+
+                            <ul class="w-menu__sub-menu">
+                                <li class="w-menu__sub-menu-item"><a href="#" class="w-menu__sub-menu-link">Configuration</a></li>
+                                <li class="w-menu__sub-menu-item"><a href="#" class="w-menu__sub-menu-link">Core</a></li>
+                                <li class="w-menu__sub-menu-item"><a href="#" class="w-menu__sub-menu-link">Controls</a></li>
+                            </ul>
+                        </li>
+                        <li class="w-menu__item __has_submenu">
+                            <a href="#" class="w-menu__link">Our works</a>
+
+                            <ul class="w-menu__sub-menu">
+                                <li class="w-menu__sub-menu-item"><a href="#" class="w-menu__sub-menu-link">Configuration</a></li>
+                                <li class="w-menu__sub-menu-item"><a href="#" class="w-menu__sub-menu-link">Core</a></li>
+                                <li class="w-menu__sub-menu-item"><a href="#" class="w-menu__sub-menu-link">Controls</a></li>
+                            </ul>
+                        </li>
                         <li class="w-menu__item"><a href="#" class="w-menu__link __search">Search</a></li>
                     </ul>
                 </nav>
             </div>
             <!-- /w-menu -->
         </div>
+        <!-- /l-front-block -->
+        <!-- w-search-block -->
+        <div class="l-full-screen-block__item w-search-block">
+            <!-- b-search-form -->
+            <form class="w-search-block__form b-search-form" action="/" method="get" accept-charset="utf-8">
+                <div class="">
+                    <input type="search" name="search" class="b-search-form__input" value="" placeholder="Search...">
+                </div>
+            </form>
+            <!-- /b-search-form -->
+            <ul class="w-search-block__results">
+                <li class="w-search-block__item">
+                    <a href="#" class="w-search-block__link">
+                        <img class="w-search-block__img" src="./img/i-m-g-0055@3x.png" alt="">
+                        <div class="w-search-block__text">
+                            <h3><b>Here is</b> will be title</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati atque sit eius, doloribus autem officia! Totam laboriosam quisquam possimus, omnis sequi quod amet reiciendis, nesciunt repudiandae minima illo molestias qui.</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="w-search-block__item">
+                    <a href="#" class="w-search-block__link">
+                        <img class="w-search-block__img" src="./img/i-m-g-0055@3x.png" alt="">
+                        <div class="w-search-block__text">
+                            <h3><b>Here is</b> will be title</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati atque sit eius, doloribus autem officia! Totam laboriosam quisquam possimus, omnis sequi quod amet reiciendis, nesciunt repudiandae minima illo molestias qui.</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="w-search-block__item">
+                    <a href="#" class="w-search-block__link">
+                        <img class="w-search-block__img" src="./img/i-m-g-0055@3x.png" alt="">
+                        <div class="w-search-block__text">
+                            <h3><b>Here is</b> will be title</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati atque sit eius, doloribus autem officia! Totam laboriosam quisquam possimus, omnis sequi quod amet reiciendis, nesciunt repudiandae minima illo molestias qui.</p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <button class="w-search-block__close">Close</button>
+        </div>
+        <!-- /w-search-block -->
         <!-- /l-main-block -->
     </section>
 

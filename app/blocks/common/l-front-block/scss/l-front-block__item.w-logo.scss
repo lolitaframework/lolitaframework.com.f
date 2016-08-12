@@ -3,6 +3,7 @@
 
 .l-front-block__item.w-logo {
 	@include opacity(1);
+	@include transition(0.3s all);
 	visibility: visible;
 	position: relative;
 	align-self: center;

@@ -1,0 +1,14 @@
+@import "../../../../scss/core/_variables.scss";
+@import "../../../../scss/core/_mixins.scss";
+
+.b-search-form__input {
+	display: block;
+	width: 100%;
+	height: 22px;
+	line-height: 22px;
+	font-size: 16px;
+	border: 0;
+	outline: 0;
+	font-weight: 100;
+	padding-left: 12px;	
+}

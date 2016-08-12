@@ -22,3 +22,13 @@ $w_menu__item__has_submenu.hover(
 		$w_menu__undered_line.animate({'width': '0'}, 100);
 	}
 );
+
+// add search button trigger
+
+$w_menu__link__search = $('.w-menu__link.__search');
+
+$w_menu__link __search.on('click', 
+	function() {
+		$('body').trigger('w_menu__link__search_click')
+	}
+);
