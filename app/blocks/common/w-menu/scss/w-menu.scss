@@ -4,3 +4,124 @@
 .w-menu {
 	
 }
+
+.w-menu__container {
+	position: relative;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	font-size: 0;
+}
+
+.w-menu__item {
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.w-menu__item:last-child {
+	margin-right: 0;
+}
+
+.w-menu__item.__has_submenu {
+	position: relative;
+	padding-right: 35px;
+	&:after {
+		content: ' ';
+		display: inline-block;
+		font-size: 0;
+		width: 12px;
+		height: 8px;
+		background: url('../img/arrow-down.svg') 0 0 no-repeat;
+		background-size: contain;
+		cursor: pointer;
+
+		position: absolute;
+		top: 50%;
+		margin-top: -4px;
+		right: 10px;
+		vertical-align: middle;
+	}
+	&:hover .w-menu__sub-menu {
+		@include opacity(1);
+		@include transition(visibility 0s cubic-bezier(0.165, 0.84, 0.44, 1) 0s, opacity 0.25s cubic-bezier(0.165, 0.84, 0.44, 1), transform 0.25s cubic-bezier(0.165, 0.84, 0.44, 1)); 
+		@include transform(translate(0, 0));
+
+	    visibility: visible;
+	}
+}
+
+.w-menu__link {
+	font-size: 16px;
+	text-align: center;
+	text-decoration: none;
+	color: #000;
+	font-weight: 100;
+}
+
+.w-menu__link.__search {
+	@include hide-text();
+	display: inline-block;
+	width: 15px;
+	height: 22px;
+	background: url('../img/search-black.svg') 0 0 no-repeat;
+	background-size: contain;
+	vertical-align: middle;
+}
+
+.w-menu__sub-menu {
+    @include opacity(0);
+    @include transition(visibility 0s cubic-bezier(0.165, 0.84, 0.44, 1) 0.25s, opacity 0.25s cubic-bezier(0.165, 0.84, 0.44, 1), transform 0.25s cubic-bezier(0.165, 0.84, 0.44, 1));
+    @include transform(translate(0, -5px));
+
+    visibility: hidden;
+    list-style: none;
+
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 18px;
+    left: 0;
+    padding-top: 10px;
+}
+
+.w-menu__sub-menu-item {
+    display: block;
+    width: 100%;
+    border-radius: 2px;
+    margin-bottom: 14px;
+    &:hover {
+        background-color: #000000;
+    }
+}
+
+.w-menu__sub-menu-link {
+    display: block;
+    height: 28px;
+    padding: 0 9px;
+    text-align: left;
+	font-size: 16px;
+	color: #000000;
+	line-height: 28px;
+	font-weight: 100;
+	text-decoration: none;
+	vertical-align: middle;
+
+    &:hover {
+        color: #fff;
+        text-decoration: none;
+    }
+}
+
+.w-menu__undered-line {
+	display: block;
+	height: 2px;
+	width: 0;
+	background-color: #000;
+	z-index: -1;
+	position: absolute;
+	left: 0;
+	bottom: -4px;
+}

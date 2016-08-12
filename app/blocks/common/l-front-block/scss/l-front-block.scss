@@ -25,3 +25,27 @@
 		}
 	}
 }
+
+.l-front-block__item {
+	
+}
+
+.l-front-block__item.w-logo {
+	@include opacity(1);
+	@include transition(0.3s all);
+	visibility: visible;
+	position: relative;
+	align-self: center;
+}
+
+.l-front-block__item.w-menu {
+	@include opacity(0);
+	@include transition(0.3s all);
+	visibility: hidden;
+	position: absolute;
+	align-self: center;
+}
+
+.l-full-screen-block__item.l-front-block {
+	align-self: center;
+}

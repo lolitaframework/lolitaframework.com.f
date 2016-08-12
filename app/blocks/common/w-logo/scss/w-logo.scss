@@ -4,3 +4,11 @@
 .w-logo {
 	@include hide-text();
 }
+
+.w-logo__link {
+	display: inline-block;
+	width: 262px;
+	height: 128px;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
