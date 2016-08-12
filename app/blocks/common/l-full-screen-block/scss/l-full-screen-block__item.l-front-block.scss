@@ -1,6 +1,6 @@
 @import "../../../../scss/core/_variables.scss";
 @import "../../../../scss/core/_mixins.scss";
 
-.l-front-block__item.__hidden {
-	
+.l-full-screen-block__item.l-front-block {
+	align-self: center;
 }

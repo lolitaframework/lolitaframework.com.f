@@ -1,0 +1,9 @@
+@import "../../../../scss/core/_variables.scss";
+@import "../../../../scss/core/_mixins.scss";
+
+.l-front-block__item.w-menu {
+	@include opacity(0);
+	visibility: hidden;
+	position: absolute;
+	align-self: center;
+}

@@ -2,5 +2,24 @@
 @import "../../../../scss/core/_mixins.scss";
 
 .l-front-block {
-	
+	align-self: center;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+
+	min-width: 300px;
+	min-height: 128px;
+
+	&:hover {
+		.l-front-block__item.w-logo {
+			@include opacity(0);
+			visibility: hidden;
+			position: absolute;
+		}
+		.l-front-block__item.w-menu {
+			@include opacity(1);
+			visibility: visible;
+			position: relative;
+		}
+	}
 }
