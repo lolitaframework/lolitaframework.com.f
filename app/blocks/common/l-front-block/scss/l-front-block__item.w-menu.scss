@@ -3,6 +3,7 @@
 
 .l-front-block__item.w-menu {
 	@include opacity(0);
+	@include transition(0.3s all);
 	visibility: hidden;
 	position: absolute;
 	align-self: center;

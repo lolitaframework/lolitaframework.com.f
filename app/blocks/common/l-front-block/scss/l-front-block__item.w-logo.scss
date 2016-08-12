@@ -2,5 +2,8 @@
 @import "../../../../scss/core/_mixins.scss";
 
 .l-front-block__item.w-logo {
-	align-self: center;	
+	@include opacity(1);
+	visibility: visible;
+	position: relative;
+	align-self: center;
 }
