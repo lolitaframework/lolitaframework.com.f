@@ -3,7 +3,7 @@
 
 .w-menu__item.__has_submenu {
 	position: relative;
-	padding-right: 25px;
+	padding-right: 35px;
 	&:after {
 		content: ' ';
 		display: inline-block;
@@ -12,11 +12,19 @@
 		height: 8px;
 		background: url('../img/arrow-down.svg') 0 0 no-repeat;
 		background-size: contain;
+		cursor: pointer;
 
 		position: absolute;
 		top: 50%;
 		margin-top: -4px;
-		right: 0;
+		right: 10px;
 		vertical-align: middle;
+	}
+	&:hover .w-menu__sub-menu {
+		@include opacity(1);
+		@include transition(visibility 0s cubic-bezier(0.165, 0.84, 0.44, 1) 0s, opacity 0.25s cubic-bezier(0.165, 0.84, 0.44, 1), transform 0.25s cubic-bezier(0.165, 0.84, 0.44, 1)); 
+		@include transform(translate(0, 0));
+
+	    visibility: visible;
 	}
 }

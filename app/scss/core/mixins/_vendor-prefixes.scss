@@ -220,3 +220,15 @@
       -ms-user-select: $select; // IE10+
           user-select: $select;
 }
+
+// Transform
+
+// generic transform
+@mixin transform($transforms) {
+     -moz-transform: $transforms;
+       -o-transform: $transforms;
+      -ms-transform: $transforms;
+  -webkit-transform: $transforms;
+          transform: $transforms;
+}
+

@@ -1,0 +1,14 @@
+@import "../../../../scss/core/_variables.scss";
+@import "../../../../scss/core/_mixins.scss";
+
+
+.w-menu__undered-line {
+	display: block;
+	height: 2px;
+	width: 0;
+	background-color: #000;
+	z-index: -1;
+	position: absolute;
+	left: 0;
+	bottom: -4px;
+}

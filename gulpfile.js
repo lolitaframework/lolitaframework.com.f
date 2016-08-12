@@ -36,7 +36,6 @@ gulp.task('blocks.block-scripts', function() {
 
 gulp.task('blocks.widget-scripts', function() {
     gulp.src(['app/blocks/**/w-**/js/*.js'])
-        .pipe(uglify())
         .pipe(flatten())
         .pipe(gulp.dest('dist/js'))
         .pipe(livereload());
