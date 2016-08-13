@@ -2,13 +2,17 @@
 @import "../../../../scss/core/_mixins.scss";
 
 .l-front-block {
+	@include opacity(1);
+	@include transition(0.3s all);
+	visibility: visible;
+	position: relative;
 	align-self: center;
 	display: flex;
 	flex-flow: row nowrap;
 	justify-content: center;
 
 	min-width: 300px;
-	min-height: 128px;
+	min-height: 300px;
 
 	&:hover {
 		.l-front-block__item.w-logo {
@@ -42,6 +46,12 @@
 			position: absolute;
 			align-self: center;
 		}
+	}
+	&.__hidden {
+		@include opacity(0);
+		@include transition(0.3s all);
+		visibility: hidden;
+		position: absolute;
 	}
 }
 

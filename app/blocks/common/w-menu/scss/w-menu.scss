@@ -2,6 +2,7 @@
 @import "../../../../scss/core/_mixins.scss";
 
 .w-menu {
+	position: relative;
 	&__container {
 		position: relative;
 		list-style: none;

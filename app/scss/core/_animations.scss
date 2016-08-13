@@ -1,0 +1,25 @@
+@-webkit-keyframes ac-gn-searchform-slide {
+	0% {
+		-webkit-transform: translate3d(100px, 0, 0);
+		transform: translate3d(100px, 0, 0);
+		-webkit-animation-timing-function: cubic-bezier(0.11393, 0.8644, 0.14684, 1);
+		animation-timing-function: cubic-bezier(0.11393, 0.8644, 0.14684, 1)
+	}
+	100% {
+		-webkit-transform: translateZ(0);
+		transform: translateZ(0)
+	}
+}
+
+@keyframes ac-gn-searchform-slide {
+	0% {
+		-webkit-transform: translate3d(100px, 0, 0);
+		transform: translate3d(100px, 0, 0);
+		-webkit-animation-timing-function: cubic-bezier(0.11393, 0.8644, 0.14684, 1);
+		animation-timing-function: cubic-bezier(0.11393, 0.8644, 0.14684, 1)
+	}
+	100% {
+		-webkit-transform: translateZ(0);
+		transform: translateZ(0)
+	}
+}
