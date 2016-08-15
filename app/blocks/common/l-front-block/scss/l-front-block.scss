@@ -1,60 +1,71 @@
 @import "../../../../scss/core/_variables.scss";
 @import "../../../../scss/core/_mixins.scss";
 
-.l-front-block {
-	@include opacity(1);
-	@include transition(0.3s all);
-	visibility: visible;
-	position: relative;
-	align-self: center;
-	display: flex;
-	flex-flow: row nowrap;
-	justify-content: center;
+// Extra small screens
+@media (max-width: $screen-xs-max) {}
 
-	min-width: 300px;
-	min-height: 300px;
-
-	&:hover {
-		.l-front-block__item.w-logo {
-			@include opacity(0);
-			@include transition(0.3s all);
-			visibility: hidden;
-			position: absolute;
-		}
-		.l-front-block__item.w-menu {
-			@include opacity(1);
-			@include transition(0.3s all);
-			visibility: visible;
-			position: relative;
-		}
-	}
-
-	&__item {
-
-		&.w-logo {
-			@include opacity(1);
-			@include transition(0.3s all);
-			visibility: visible;
-			position: relative;
-			align-self: center;			
-		}
-
-		&.w-menu {
-			@include opacity(0);
-			@include transition(0.3s all);
-			visibility: hidden;
-			position: absolute;
-			align-self: center;
-		}
-	}
-	&.__hidden {
-		@include opacity(0);
-		@include transition(0.3s all);
-		visibility: hidden;
-		position: absolute;
-	}
+// General mobile version
+@media (max-width: $screen-sm-max) {
+    .l-front-block {
+        display: flex;
+        flex-flow: column nowrap;
+    }
 }
 
-.l-full-screen-block__item.l-front-block {
-	align-self: center;
+// General desktop version
+@media (min-width: $screen-md-min) {
+    .l-front-block {
+        @include opacity(1);
+        @include transition(0.3s all);
+        visibility: visible;
+        position: relative;
+        align-self: center;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        min-width: 300px;
+        min-height: 300px;
+        &:hover {
+            .l-front-block__item.w-logo {
+                @include opacity(0);
+                @include transition(0.3s all);
+                visibility: hidden;
+                position: absolute;
+            }
+            .l-front-block__item.w-menu {
+                @include opacity(1);
+                @include transition(0.3s all);
+                visibility: visible;
+                position: relative;
+            }
+        }
+        &__item {
+            &.w-logo {
+                @include opacity(1);
+                @include transition(0.3s all);
+                visibility: visible;
+                position: relative;
+                align-self: center;
+            }
+            &.w-menu {
+                @include opacity(0);
+                @include transition(0.3s all);
+                visibility: hidden;
+                position: absolute;
+                align-self: center;
+            }
+        }
+        &.__hidden {
+            @include opacity(0);
+            @include transition(0.3s all);
+            visibility: hidden;
+            position: absolute;
+        }
+    }
+    .l-full-screen-block__item.l-front-block {
+        align-self: center;
+    }
 }
+
+// Large screens adjustments
+@media (min-width: $screen-lg-min) {}

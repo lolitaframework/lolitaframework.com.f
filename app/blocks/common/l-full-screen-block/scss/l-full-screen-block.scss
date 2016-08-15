@@ -1,13 +1,26 @@
 @import "../../../../scss/core/_variables.scss";
 @import "../../../../scss/core/_mixins.scss";
 
-.l-full-screen-block {
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	display: flex;
-	flex-flow: row nowrap;
-	justify-content: center;
+
+// Extra small screens
+@media (max-width: $screen-xs-max) {}
+
+// General mobile version
+@media (max-width: $screen-sm-max) {}
+
+// General desktop version
+@media (min-width: $screen-md-min) {
+    .l-full-screen-block {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+    }
 }
+
+// Large screens adjustments
+@media (min-width: $screen-lg-min) {}
