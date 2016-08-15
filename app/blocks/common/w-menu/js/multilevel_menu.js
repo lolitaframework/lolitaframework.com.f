@@ -6,12 +6,14 @@ var LolitaFramework;
             this.$menu_container = null;
             this.$menu_item_selector = 'li';
             this.$menu_items = [];
-            this.$back_object = null;
+            this.$current_menu = null;
             if (menu_selector == null) {
                 console.log('%c You should provide the menu selector', 'color: red');
                 return;
             }
             this.$menu_container = jQuery(menu_selector);
+            this.$current_menu = this.$menu_container;
+            this.$menu_container.css('position', 'relative');
             if (this.$menu_container.length != 1) {
                 this.$menu_container = null;
                 console.log('%c There should me at least one menu', 'color: red');
@@ -39,8 +41,19 @@ var LolitaFramework;
             }
         };
         MultilevelMenu.prototype.render_submenu = function (sub_menu) {
+            var menu_width = this.$menu_container.outerWidth();
+            var $back_button;
+            sub_menu.css('position', 'absolute');
+            sub_menu.css({ 'top': '0px', 'left': menu_width + 'px' });
+            if (!sub_menu.find('li').first().hasClass('back_button')) {
+                $back_button = jQuery('<li class="back_button">Back</li>');
+                sub_menu.prepend($back_button);
+                $back_button.on('click', this.render_back($back_button));
+            }
+            sub_menu.animate({ 'left': '0px' }, 200);
+            this.$current_menu = sub_menu;
         };
-        MultilevelMenu.prototype.back = function () {
+        MultilevelMenu.prototype.render_back = function (back_object) {
         };
         return MultilevelMenu;
     }());

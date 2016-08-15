@@ -30,7 +30,7 @@ namespace LolitaFramework {
          * Back object
          * @type {object}
          */
-         $back_object: any = null;
+         $current_menu: any = null;
 
         /**
          * Constructor
@@ -41,6 +41,8 @@ namespace LolitaFramework {
         		return;
         	}
         	this.$menu_container = jQuery(menu_selector);
+        	this.$current_menu = this.$menu_container;
+        	this.$menu_container.css('position', 'relative');
         	if (this.$menu_container.length != 1) {
         		this.$menu_container = null;
         		console.log('%c There should me at least one menu', 'color: red');
@@ -75,14 +77,29 @@ namespace LolitaFramework {
         /**
          * Render sub-menu
          */
-        render_submenu(sub_menu: Object) {
+        render_submenu(sub_menu: any) {
+        	var menu_width = this.$menu_container.outerWidth();
+        	var $back_button: any;
 
+        	sub_menu.css('position', 'absolute');
+        	sub_menu.css({'top': '0px', 'left': menu_width+'px'});
+
+        	if (!sub_menu.find('li').first().hasClass('back_button')) {
+        		$back_button = jQuery('<li class="back_button">Back</li>');
+        		sub_menu.prepend($back_button);
+        		$back_button.on('click', this.render_back;
+        	}
+
+        	sub_menu.animate({'left': '0px'}, 200);
+        	this.$menu_container.width(sub_menu.outerWidth());
+        	this.$menu_container.height(sub_menu.outerHeight());
+        	this.$current_menu = sub_menu;
         }
 
         /**
-         * On Back
+         * Render back
          */
-        back() {
+        render_back() {
 
         }
 
