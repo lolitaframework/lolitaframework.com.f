@@ -1,0 +1,12 @@
+{
+	"compilerOptions": {
+		"noImplicitAny": true,
+		"removeComments": true,
+		"preserveConstEnums": true,
+		"out": "../js/multilevel_menu.js",
+		"sourceMap": true
+	},
+	"files": [
+		"multilevel_menu.ts"
+	]
+}
