@@ -78,7 +78,7 @@ var LolitaFramework;
         MultilevelMenu.prototype.render_submenu = function ($sub_menu) {
             var $back_button;
             if (!$sub_menu.find('li').first().hasClass('back_button')) {
-                $back_button = jQuery('<li class="back_button">Back</li>');
+                $back_button = jQuery('<li class="w-menu__sub-menu-item back_button">Back</li>');
                 $sub_menu.prepend($back_button);
                 var _this = this;
                 $back_button.on('click', function (e) {
