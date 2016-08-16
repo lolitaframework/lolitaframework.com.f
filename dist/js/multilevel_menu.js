@@ -6,7 +6,6 @@ var LolitaFramework;
             if (sub_menu_selector === void 0) { sub_menu_selector = null; }
             this.$menu_selector = null;
             this.$menu = null;
-            this.$menu_width = null;
             this.$menu_item_selector = 'li';
             this.$current_menu = null;
             if (menu_selector == null) {
@@ -19,7 +18,6 @@ var LolitaFramework;
             }
             this.$menu_selector = menu_selector;
             this.$menu = jQuery(menu_selector);
-            this.$menu_width = this.$menu.outerWidth();
             this.$sub_menu_selector = sub_menu_selector;
             this.$current_menu = this.$menu;
             this.$menu.css({ 'position': 'relative', 'overflow': 'hidden', 'background-color': '#fff' });
@@ -28,6 +26,7 @@ var LolitaFramework;
                 console.log('%c There should me at least one menu', 'color: red');
                 return;
             }
+            var $sub_menu_items = jQuery(this.$sub_menu_selector).hide();
             var $menu_items = jQuery(this.$menu).find(this.$menu_item_selector);
             if ($menu_items.length < 1) {
                 console.log('%c There should be at least one menu item', 'color: red');
@@ -91,8 +90,14 @@ var LolitaFramework;
             else {
                 new_z_index = (new_z_index + 1);
             }
-            $sub_menu.css({ 'position': 'absolute', 'z-index': new_z_index, 'background-color': '#fff' });
-            $sub_menu.css({ 'top': '0px', 'left': this.$menu_width + 'px' });
+            $sub_menu.css({
+                'display': 'block',
+                'position': 'absolute',
+                'z-index': new_z_index,
+                'background-color': '#fff',
+                'top': '0px',
+                'left': this.$menu.outerWidth() + 'px'
+            });
             $sub_menu.animate({ 'left': '0px' }, 200);
             this.$current_menu = $sub_menu;
         };
@@ -104,7 +109,7 @@ var LolitaFramework;
             }
             this.$menu.height($parent_menu.outerHeight());
             $parent_menu.width(this.$menu.outerWidth());
-            this.$current_menu.animate({ 'left': this.$menu_width + 'px' }, 200);
+            this.$current_menu.animate({ 'left': this.$menu.outerWidth() + 'px' }, 200);
             this.$current_menu = $parent_menu;
         };
         return MultilevelMenu;

@@ -15,12 +15,6 @@ namespace LolitaFramework {
          private $menu: any = null;
 
         /**
-         * Menu Object
-         * @type {object}
-         */
-         private $menu_width: any = null;
-
-        /**
          * Menu Item Selector
          * @type {string}
          */
@@ -53,15 +47,19 @@ namespace LolitaFramework {
 
             this.$menu_selector = menu_selector;
         	this.$menu = jQuery(menu_selector);
-            this.$menu_width = this.$menu.outerWidth();
         	this.$sub_menu_selector = sub_menu_selector;
         	this.$current_menu = this.$menu;
+
+            // set main menu container parameters
         	this.$menu.css({'position': 'relative', 'overflow': 'hidden', 'background-color': '#fff'});
         	if (this.$menu.length != 1) {
         		this.$menu = null;
         		console.log('%c There should me at least one menu', 'color: red');
         		return;
         	}
+
+            // select and hide all sub-menus
+            var $sub_menu_items = jQuery(this.$sub_menu_selector).hide();    
 
             // select all menu items
         	var $menu_items = jQuery(this.$menu).find(this.$menu_item_selector);
@@ -148,8 +146,16 @@ namespace LolitaFramework {
             }
 
             // animate
-			$sub_menu.css({'position': 'absolute', 'z-index': new_z_index, 'background-color': '#fff'});
-        	$sub_menu.css({'top': '0px', 'left': this.$menu_width+'px'});
+			$sub_menu.css(
+                {
+                    'display':           'block',
+                    'position':          'absolute', 
+                    'z-index':            new_z_index, 
+                    'background-color':  '#fff',
+                    'top':               '0px',
+                    'left':              this.$menu.outerWidth()+'px'
+                }
+            );
 
         	$sub_menu.animate({'left': '0px'}, 200);
 
@@ -173,7 +179,7 @@ namespace LolitaFramework {
             $parent_menu.width(this.$menu.outerWidth());
 
             // animate
-            this.$current_menu.animate({'left': this.$menu_width+'px'}, 200);
+            this.$current_menu.animate({'left': this.$menu.outerWidth()+'px'}, 200);
 
             // set current menu
             this.$current_menu = $parent_menu;
