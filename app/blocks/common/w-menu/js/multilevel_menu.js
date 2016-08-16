@@ -1,79 +1,114 @@
 var LolitaFramework;
 (function (LolitaFramework) {
     var MultilevelMenu = (function () {
-        function MultilevelMenu(menu_selector) {
+        function MultilevelMenu(menu_selector, sub_menu_selector) {
             if (menu_selector === void 0) { menu_selector = null; }
-            this.$menu_container = null;
+            if (sub_menu_selector === void 0) { sub_menu_selector = null; }
+            this.$menu_selector = null;
+            this.$menu = null;
+            this.$menu_width = null;
             this.$menu_item_selector = 'li';
-            this.$menu_items = [];
             this.$current_menu = null;
             if (menu_selector == null) {
                 console.log('%c You should provide the menu selector', 'color: red');
                 return;
             }
-            this.$menu_container = jQuery(menu_selector);
-            this.$current_menu = this.$menu_container;
-            this.$menu_container.css('position', 'relative');
-            if (this.$menu_container.length != 1) {
-                this.$menu_container = null;
+            if (sub_menu_selector == null) {
+                console.log('%c You should provide the sub-menu selector', 'color: red');
+                return;
+            }
+            this.$menu_selector = menu_selector;
+            this.$menu = jQuery(menu_selector);
+            this.$menu_width = this.$menu.outerWidth();
+            this.$sub_menu_selector = sub_menu_selector;
+            this.$current_menu = this.$menu;
+            this.$menu.css({ 'position': 'relative', 'overflow': 'hidden', 'background-color': '#fff' });
+            if (this.$menu.length != 1) {
+                this.$menu = null;
                 console.log('%c There should me at least one menu', 'color: red');
                 return;
             }
-            this.$menu_items = jQuery(menu_selector + '>' + this.$menu_item_selector);
-            if (this.$menu_items.length < 1) {
+            var $menu_items = jQuery(this.$menu).find(this.$menu_item_selector);
+            if ($menu_items.length < 1) {
                 console.log('%c There should be at least one menu item', 'color: red');
                 return;
             }
-            this.$menu_items.on('click', this.click);
+            var _this = this;
+            $menu_items.on('click', function (e) {
+                _this.click(e);
+            });
         }
+        MultilevelMenu.prototype.get_parent_menu = function ($menu) {
+            if ($menu.is(this.$menu_selector)) {
+                return false;
+            }
+            var $parent1 = $menu.parent();
+            var $parent0 = $menu.parent().parent();
+            if ($parent1.is('li') && $parent0.is('ul')) {
+                if ($parent0.is(this.$menu_selector)) {
+                    return this.$menu;
+                }
+                else {
+                    return $parent0;
+                }
+            }
+            else {
+                return false;
+            }
+        };
         MultilevelMenu.prototype.click = function (event) {
-            var link = jQuery(this).children('a');
-            var sub_menu = jQuery(this).children(this.$sub_menu_selector);
-            event.prevendDefault();
-            if (sub_menu.length == 0 && link.length == 0) {
+            event.preventDefault();
+            event.stopPropagation();
+            var $link = jQuery(event.currentTarget).children('a');
+            var $sub_menu = jQuery(event.currentTarget).children(this.$sub_menu_selector);
+            if ($sub_menu.length == 0 && $link.length == 0) {
                 console.log('%c There is no links or sub menus', 'color: red');
                 return;
             }
-            else if (sub_menu.length == 1) {
-                this.render_submenu(sub_menu);
+            else if ($sub_menu.length == 1) {
+                this.render_submenu($sub_menu);
             }
             else {
-                window.location.href = link.attr('href');
+                window.location.href = $link.attr('href');
             }
         };
-        MultilevelMenu.prototype.render_submenu = function (sub_menu, reverse) {
-            if (reverse === void 0) { reverse = false; }
-            var menu_width = this.$menu_container.outerWidth();
+        MultilevelMenu.prototype.render_submenu = function ($sub_menu) {
             var $back_button;
-            if (!sub_menu.find('li').first().hasClass('back_button')) {
+            if (!$sub_menu.find('li').first().hasClass('back_button')) {
                 $back_button = jQuery('<li class="back_button">Back</li>');
-                sub_menu.prepend($back_button);
-                $back_button.on('click', this.render_back);
+                $sub_menu.prepend($back_button);
+                var _this = this;
+                $back_button.on('click', function (e) {
+                    _this.render_back(e);
+                });
             }
-            this.$menu_container.width(sub_menu.outerWidth());
-            this.$menu_container.height(sub_menu.outerHeight());
-            sub_menu.css('position', 'absolute');
-            if (reverse) {
-                sub_menu.css({ 'top': '0px', 'left': '-' + menu_width + 'px' });
+            this.$menu.height($sub_menu.outerHeight());
+            $sub_menu.width(this.$menu.outerWidth());
+            var new_z_index = $sub_menu.css('z-index');
+            if (new_z_index == 'auto') {
+                new_z_index = '1';
             }
             else {
-                sub_menu.css({ 'top': '0px', 'left': menu_width + 'px' });
+                new_z_index = (new_z_index + 1);
             }
-            sub_menu.animate({ 'left': '0px' }, 200);
-            this.$current_menu = sub_menu;
+            $sub_menu.css({ 'position': 'absolute', 'z-index': new_z_index, 'background-color': '#fff' });
+            $sub_menu.css({ 'top': '0px', 'left': this.$menu_width + 'px' });
+            $sub_menu.animate({ 'left': '0px' }, 200);
+            this.$current_menu = $sub_menu;
         };
-        MultilevelMenu.prototype.render_back = function () {
-            var $parent_menu = this.$current_menu.parent();
-            if (!$parent_menu.is('ul')) {
-                console.log('%c There is a problem with markup', 'color: red');
+        MultilevelMenu.prototype.render_back = function (event) {
+            var $parent_menu = this.get_parent_menu(this.$current_menu);
+            event.stopPropagation();
+            if ($parent_menu == false) {
                 return;
             }
-            if ($parent_menu.hasClass(this.$sub_menu_selector)) {
-                this.render_submenu($parent_menu, true);
-            }
+            this.$menu.height($parent_menu.outerHeight());
+            $parent_menu.width(this.$menu.outerWidth());
+            this.$current_menu.animate({ 'left': this.$menu_width + 'px' }, 200);
+            this.$current_menu = $parent_menu;
         };
         return MultilevelMenu;
     }());
-    window.LolitaFramework.multilevel_menu = new MultilevelMenu();
+    window.LolitaFramework.multilevel_menu = new MultilevelMenu('.w-menu__container', '.w-menu__sub-menu');
 })(LolitaFramework || (LolitaFramework = {}));
 //# sourceMappingURL=multilevel_menu.js.map

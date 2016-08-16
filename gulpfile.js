@@ -27,7 +27,7 @@ gulp.task('blocks.images', function() {
 // Scripts
 
 gulp.task('blocks.block-scripts', function() {
-    gulp.src(['app/blocks/**/b-**/js/*.js', 'app/blocks/**/l-**/js/*.js'])
+    gulp.src(['app/blocks/**/b-**/js/*.js', 'app/blocks/**/l-**/js/*.js', 'app/blocks/**/b-**/js/*.js.map', 'app/blocks/**/l-**/js/*.js.map'])
         .pipe(concat('blocks.common.js'))
         .pipe(uglify())
         .pipe(gulp.dest('dist/js'))
@@ -35,7 +35,7 @@ gulp.task('blocks.block-scripts', function() {
 });
 
 gulp.task('blocks.widget-scripts', function() {
-    gulp.src(['app/blocks/**/w-**/js/*.js'])
+    gulp.src(['app/blocks/**/w-**/js/*.js', 'app/blocks/**/w-**/js/*.js.map'])
         .pipe(flatten())
         .pipe(gulp.dest('dist/js'))
         .pipe(livereload());
