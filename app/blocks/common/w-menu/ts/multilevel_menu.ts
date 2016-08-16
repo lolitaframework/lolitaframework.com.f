@@ -2,11 +2,12 @@
 
 namespace LolitaFramework {
     class MultilevelMenu {
+
         /**
-         * Menu Object
-         * @type {object}
+         * Menu Selector
+         * @type {string}
          */
-         private $menu_selector: any = null;
+         private menu_selector: any = null;
 
         /**
          * Menu Object
@@ -18,16 +19,16 @@ namespace LolitaFramework {
          * Menu Item Selector
          * @type {string}
          */
-         private $menu_item_selector: string = 'li';
+         private menu_item_selector: string = 'li';
 
         /**
          * Sub Menu Selector
          * @type {string}
          */         
-         private $sub_menu_selector: string;
+         private sub_menu_selector: string;
 
         /**
-         * Back object
+         * Current menu
          * @type {object}
          */
          private $current_menu: any = null;
@@ -35,7 +36,11 @@ namespace LolitaFramework {
         /**
          * Constructor
          */
-        constructor(menu_selector: string = null, sub_menu_selector: string = null) {
+        constructor(menu_selector: string = null, sub_menu_selector: string = null, max_screen_width: number = 768) {
+
+            if (jQuery(window).width() > max_screen_width) {
+                return;
+            }
         	if (menu_selector == null) {
         		console.log('%c You should provide the menu selector', 'color: red');
         		return;
@@ -45,9 +50,9 @@ namespace LolitaFramework {
         		return;
         	}
 
-            this.$menu_selector = menu_selector;
+            this.menu_selector = menu_selector;
         	this.$menu = jQuery(menu_selector);
-        	this.$sub_menu_selector = sub_menu_selector;
+        	this.sub_menu_selector = sub_menu_selector;
         	this.$current_menu = this.$menu;
 
             // set main menu container parameters
@@ -59,10 +64,10 @@ namespace LolitaFramework {
         	}
 
             // select and hide all sub-menus
-            var $sub_menu_items = jQuery(this.$sub_menu_selector).hide();    
+            var $sub_menu_items = jQuery(this.sub_menu_selector).hide();    
 
             // select all menu items
-        	var $menu_items = jQuery(this.$menu).find(this.$menu_item_selector);
+        	var $menu_items = jQuery(this.$menu).find(this.menu_item_selector);
         	if ($menu_items.length < 1) {
         		console.log('%c There should be at least one menu item', 'color: red');
         		return;        		
@@ -78,7 +83,7 @@ namespace LolitaFramework {
          * Get parent menu
          */
         private get_parent_menu($menu:any) {
-            if ($menu.is(this.$menu_selector)) {
+            if ($menu.is(this.menu_selector)) {
                 return false;
             }
 
@@ -86,7 +91,7 @@ namespace LolitaFramework {
             var $parent0 = $menu.parent().parent();
 
             if ($parent1.is('li') && $parent0.is('ul')) {
-                if ($parent0.is(this.$menu_selector)) {
+                if ($parent0.is(this.menu_selector)) {
                     return this.$menu;
                 } else {
                     return $parent0;
@@ -104,7 +109,7 @@ namespace LolitaFramework {
             event.stopPropagation();
 
         	var $link = jQuery(event.currentTarget).children('a');
-        	var $sub_menu = jQuery(event.currentTarget).children(this.$sub_menu_selector);
+        	var $sub_menu = jQuery(event.currentTarget).children(this.sub_menu_selector);
 
         	if ($sub_menu.length == 0 && $link.length == 0) {
         		console.log('%c There is no links or sub menus', 'color: red');
@@ -167,8 +172,9 @@ namespace LolitaFramework {
          * Render back
          */
         private render_back(event:any) {
-            var $parent_menu = this.get_parent_menu(this.$current_menu);
             event.stopPropagation();
+
+            var $parent_menu = this.get_parent_menu(this.$current_menu);
 
             if ($parent_menu == false) {
                 return;
