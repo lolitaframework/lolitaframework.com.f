@@ -60,9 +60,11 @@ namespace LolitaFramework {
         /**
          * On Link Click
          */
-        click() {
+        click(event: any) {
         	var link = jQuery(this).children('a');
         	var sub_menu = jQuery(this).children(this.$sub_menu_selector);
+
+        	event.prevendDefault();
 
         	if (sub_menu.length == 0 && link.length == 0) {
         		console.log('%c There is no links or sub menus', 'color: red');
@@ -77,22 +79,31 @@ namespace LolitaFramework {
         /**
          * Render sub-menu
          */
-        render_submenu(sub_menu: any) {
+        render_submenu(sub_menu: any, reverse: boolean = false) {
         	var menu_width = this.$menu_container.outerWidth();
         	var $back_button: any;
 
-        	sub_menu.css('position', 'absolute');
-        	sub_menu.css({'top': '0px', 'left': menu_width+'px'});
-
+        	// add back button if required
         	if (!sub_menu.find('li').first().hasClass('back_button')) {
         		$back_button = jQuery('<li class="back_button">Back</li>');
         		sub_menu.prepend($back_button);
-        		$back_button.on('click', this.render_back;
+        		$back_button.on('click', this.render_back);
         	}
 
-        	sub_menu.animate({'left': '0px'}, 200);
+        	// set container size
         	this.$menu_container.width(sub_menu.outerWidth());
         	this.$menu_container.height(sub_menu.outerHeight());
+
+        	// animate
+			sub_menu.css('position', 'absolute');
+        	if (reverse) {
+        		sub_menu.css({'top': '0px', 'left': '-'+menu_width+'px'});
+        	} else {
+	        	sub_menu.css({'top': '0px', 'left': menu_width+'px'});
+        	}
+        	sub_menu.animate({'left': '0px'}, 200);
+
+        	// set current menu
         	this.$current_menu = sub_menu;
         }
 
@@ -100,6 +111,14 @@ namespace LolitaFramework {
          * Render back
          */
         render_back() {
+        	var $parent_menu = this.$current_menu.parent();
+        	if (!$parent_menu.is('ul')) {
+        		console.log('%c There is a problem with markup', 'color: red');
+        		return;        		        		
+        	}
+        	if ($parent_menu.hasClass(this.$sub_menu_selector)) {
+        		this.render_submenu($parent_menu, true);
+        	}
 
         }
 
