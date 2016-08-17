@@ -78,7 +78,7 @@ var LolitaFramework;
         MultilevelMenu.prototype.render_submenu = function ($sub_menu) {
             var $back_button;
             if (!$sub_menu.find('li').first().hasClass('back_button')) {
-                $back_button = jQuery('<li class="w-menu__sub-menu-item back_button">Back</li>');
+                $back_button = jQuery('<li class="w-menu__sub-menu-item back_button"><a class="w-menu__sub-menu-link">Back</a></li>');
                 $sub_menu.prepend($back_button);
                 var _this = this;
                 $back_button.on('click', function (e) {
@@ -111,7 +111,12 @@ var LolitaFramework;
             if ($parent_menu == false) {
                 return;
             }
-            this.$menu.height($parent_menu.outerHeight());
+            if (this.$menu = $parent_menu) {
+                this.$menu.height('auto');
+            }
+            else {
+                this.$menu.height($parent_menu.outerHeight());
+            }
             $parent_menu.width(this.$menu.outerWidth());
             this.$current_menu.animate({ 'left': this.$menu.outerWidth() + 'px' }, 200);
             this.$current_menu = $parent_menu;

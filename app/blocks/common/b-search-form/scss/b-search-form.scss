@@ -1,24 +1,49 @@
 @import "../../../../scss/core/_variables.scss";
 @import "../../../../scss/core/_mixins.scss";
 
-.b-search-form {
-	position: relative;	
 
-	&__input {
-		display: block;
-		width: 100%;
-		height: 22px;
-		line-height: 22px;
-		font-size: 16px;
-		border: 0;
-		outline: 0;
-		font-weight: 100;
-		padding-left: 12px;	
-		font-weight: 400;
-	}
+// General mobile version
+@media (max-width: $screen-sm-max) {
+    .b-search-form {
+        position: relative;
+        &__input {
+        	display: block;
+        	box-sizing: border-box !important;
+        	width: 100%;
+        	height: 44px;
+        	line-height: 44px;
+        	padding-left: 40px;
+        	padding-right: 40px;
+        	font-size: 16px;
+        	font-weight: 400;
+        	border: 0;
+        	outline: 0;
+        }
+    }
+    .w-search-block__form.b-search-form {
+    	width: 100%;	
+    }
 }
 
-.w-search-block__form.b-search-form {
-	width: 100%;	
-	margin-bottom: 5px;
+// General desktop version
+@media (min-width: $screen-md-min) {
+    .b-search-form {
+        position: relative;
+        &__input {
+            display: block;
+            width: 100%;
+            height: 22px;
+            line-height: 22px;
+            font-size: 16px;
+            border: 0;
+            outline: 0;
+            font-weight: 100;
+            padding-left: 12px;
+            font-weight: 400;
+        }
+    }
+    .w-search-block__form.b-search-form {
+        width: 100%;
+        margin-bottom: 5px;
+    }
 }

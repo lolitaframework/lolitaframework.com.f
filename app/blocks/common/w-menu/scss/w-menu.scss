@@ -1,5 +1,7 @@
 @import "../../../../scss/core/_variables.scss";
 @import "../../../../scss/core/_mixins.scss";
+
+
 // Extra small screens
 @media (max-width: $screen-xs-max) {}
 
@@ -19,21 +21,36 @@
             top: 44px;
         }
         &__item {
-            padding-left: 15px;
-            padding-right: 15px;
             border-bottom: solid 1px #bfbfbf;
-            height: 44px;
-            line-height: 44px;
             &:first-child {
                 border-top: solid 1px #bfbfbf;
             }
             &.__has_submenu {
-                
+                .w-menu__link {
+                    &:after {
+                        @include rotate(-90deg);
+                        content: ' ';
+                        display: block;
+                        width: 12px;
+                        height: 8px;
+                        background: url('../img/arrow-down.svg') 0 0 no-repeat;
+                        position: absolute;
+                        top: 50%;
+                        margin-top: -6px;
+                        right: 15px;
+                    }
+                }
+            }
+            &.__search {
+                display: none;
             }
         }
         &__link {
-            display: inline-block;
-            vertical-align: middle;
+            position: relative;
+            display: block;
+            padding: 15px 13px;
+            font-size: 16px;
+            line-height: 18px;
             text-decoration: none;
             color: #000;
         }
@@ -43,18 +60,33 @@
             margin: 0;
             padding: 0;
             &-item {
-                padding-left: 15px;
-                padding-right: 15px;
                 border-bottom: solid 1px #bfbfbf;
-                height: 44px;
-                line-height: 44px;
                 &:first-child {
                     border-top: solid 1px #bfbfbf;
                 }
+                &.back_button {
+                    .w-menu__sub-menu-link {
+                        &:after {
+                            @include rotate(90deg);
+                            content: ' ';
+                            display: block;
+                            width: 12px;
+                            height: 8px;
+                            background: url('../img/arrow-down.svg') 0 0 no-repeat;
+                            position: absolute;
+                            top: 50%;
+                            margin-top: -6px;
+                            right: 15px;
+                        }
+                    }
+                }
             }
             &-link {
-                display: inline-block;
-                vertical-align: middle;
+                position: relative;
+                display: block;
+                padding: 15px 13px;
+                font-size: 16px;
+                line-height: 18px;
                 text-decoration: none;
                 color: #000;
             }
@@ -71,6 +103,10 @@
             position: absolute;
             top: 11px;
             left: 15px;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
         }
         &__mb-menu-button {
             @include hide-text();
@@ -145,6 +181,17 @@
                     visibility: visible;
                 }
             }
+            &.__search {
+                .w-menu__link {
+                    @include hide-text();
+                    display: inline-block;
+                    width: 15px;
+                    height: 22px;
+                    background: url('../img/search-black.svg') 0 0 no-repeat;
+                    background-size: contain;
+                    vertical-align: middle;
+                }
+            }
         }
         &__link {
             font-size: 16px;
@@ -152,15 +199,6 @@
             text-decoration: none;
             color: #000;
             font-weight: 100;
-            &.__search {
-                @include hide-text();
-                display: inline-block;
-                width: 15px;
-                height: 22px;
-                background: url('../img/search-black.svg') 0 0 no-repeat;
-                background-size: contain;
-                vertical-align: middle;
-            }
         }
         &__sub-menu {
             @include opacity(0);

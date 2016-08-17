@@ -24,7 +24,7 @@ $w_menu__item__has_submenu.hover(
 );
 
 // add search button trigger
-$w_menu__link__search = $('.w-menu__link.__search');
+$w_menu__link__search = $('.w-menu__item.__search > .w-menu__link');
 $w_menu__link__search.on('click', 
 	function() {
 		$('body').trigger('w_menu__link__search_click')
@@ -38,14 +38,16 @@ $w_menu.append($w_menu__mb_search);
 $w_menu.append($w_menu__mb_menu_button);
 
 $w_menu__mb_search.on('click', 
-	function() {
-		$('body').trigger('w_menu__mb_search_click');
+	function(e) {
+		e.preventDefault();
+		$('body').trigger('w_menu__link__search_click');
 	}
 );
 
 $w_menu__mb_menu_button.on('click', 
-	function() {
+	function(e) {
+		e.preventDefault();
 		$('body').trigger('w_menu__mb_menu_button_click');
-		$w_menu__container.slideToggle('400');
+		$w_menu__container.slideToggle('100');
 	}
 );
