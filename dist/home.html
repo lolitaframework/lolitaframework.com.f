@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="format-detection" content="telephone=no">
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+    <!-- styles -->
+    <link rel="stylesheet" media="all" href="./css/libs.css">
+    <link rel="stylesheet" media="screen" href="./css/blocks.common.css">
+    <link rel="stylesheet" media="all" href="./css/main.css">
+    <title>Front-end Boilerplate</title>
+</head>
+
+<body>
+    <!-- l-main-block -->
+    <section class="l-full-screen-block">
+        <!-- l-front-block -->
+        <div class="l-full-screen-block__item l-front-block">
+            <!-- w-menu -->
+            <div class="l-front-block__item w-menu">
+                <nav>
+                    <ul class="w-menu__container">
+                        <li class="w-menu__item __has_submenu">
+                            <a href="#" class="w-menu__link">Docs</a>
+                            <ul class="w-menu__sub-menu">
+                                <li class="w-menu__sub-menu-item"><a href="#" class="w-menu__sub-menu-link">Configuration</a>
+                                </li>
+                                <li class="w-menu__sub-menu-item"><a href="#" class="w-menu__sub-menu-link">Core</a></li>
+                                <li class="w-menu__sub-menu-item"><a href="#" class="w-menu__sub-menu-link">Controls</a></li>
+                            </ul>
+                        </li>
+                        <li class="w-menu__item __has_submenu">
+                            <a href="#" class="w-menu__link">About me</a>
+                            <ul class="w-menu__sub-menu">
+                                <li class="w-menu__sub-menu-item"><a href="#" class="w-menu__sub-menu-link">Configuration1</a></li>
+                                <li class="w-menu__sub-menu-item"><a href="#" class="w-menu__sub-menu-link">Core1</a></li>
+                                <li class="w-menu__sub-menu-item"><a href="#" class="w-menu__sub-menu-link">Controls1</a></li>
+                            </ul>
+                        </li>
+                        <li class="w-menu__item __has_submenu">
+                            <a href="#" class="w-menu__link">Our works</a>
+                            <ul class="w-menu__sub-menu">
+                                <li class="w-menu__sub-menu-item"><a href="#" class="w-menu__sub-menu-link">Configuration3</a></li>
+                            </ul>
+                        </li>
+                        <li class="w-menu__item __search"><a href="#" class="w-menu__link">Search</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <!-- /w-menu -->
+            <!-- b-logo -->
+            <div class="l-front-block__item __visible w-logo">
+                <a href="#" class="w-logo__link" style="background-image:url('./img/logo.svg');"></a>
+            </div>
+            <!-- /b-logo -->
+        </div>
+        <!-- /l-front-block -->
+        <!-- w-search-block -->
+        <div class="l-full-screen-block__item w-search-block __hidden">
+            <!-- b-search-form -->
+            <form class="w-search-block__form b-search-form" action="/" method="get" accept-charset="utf-8">
+                <div class="">
+                    <input type="search" name="search" class="b-search-form__input" value="" placeholder="Search...">
+                </div>
+            </form>
+            <!-- /b-search-form -->
+            <ul class="w-search-block__results">
+                <li class="w-search-block__item">
+                    <a href="#" class="w-search-block__link">
+                        <img class="w-search-block__img" src="./img/i-m-g-0055@3x.png" alt="">
+                        <div class="w-search-block__text">
+                            <h3><b>Here is</b> will be title</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati atque sit eius, doloribus autem officia! Totam laboriosam quisquam possimus, omnis sequi quod amet reiciendis, nesciunt repudiandae minima illo molestias qui.</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="w-search-block__item">
+                    <a href="#" class="w-search-block__link">
+                        <img class="w-search-block__img" src="./img/i-m-g-0055@3x.png" alt="">
+                        <div class="w-search-block__text">
+                            <h3><b>Here is</b> will be title</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati atque sit eius, doloribus autem officia! Totam laboriosam quisquam possimus, omnis sequi quod amet reiciendis, nesciunt repudiandae minima illo molestias qui.</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="w-search-block__item">
+                    <a href="#" class="w-search-block__link">
+                        <img class="w-search-block__img" src="./img/i-m-g-0055@3x.png" alt="">
+                        <div class="w-search-block__text">
+                            <h3><b>Here is</b> will be title</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati atque sit eius, doloribus autem officia! Totam laboriosam quisquam possimus, omnis sequi quod amet reiciendis, nesciunt repudiandae minima illo molestias qui.</p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <button class="w-search-block__close">Close</button>
+        </div>
+        <!-- /w-search-block -->
+        <!-- /l-main-block -->
+    </section>
+    <!-- SCRIPTS -->
+    <script type="text/javascript" src="./js/jquery-2.2.4.js"></script>
+    <script type="text/javascript" src="./js/blocks.common.js"></script>
+    <script type="text/javascript" src="./js/multilevel_menu.js"></script>
+    <script type="text/javascript" src="./js/w-menu.js"></script>
+    <script type="text/javascript" src="./js/w-logo.js"></script>
+    <script type="text/javascript" src="./js/w-search-block.js"></script>
+    <script type="text/javascript" src="./js/main.js"></script>
+    <!-- /SCRIPTS -->
+</body>
+
+</html>

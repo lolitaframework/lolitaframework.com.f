@@ -2,9 +2,6 @@
 @import "../../../../scss/core/_mixins.scss";
 
 
-// Extra small screens
-@media (max-width: $screen-xs-max) {}
-
 // General mobile version
 @media (max-width: $screen-sm-max) {
     .w-menu {
@@ -268,6 +265,3 @@
         }
     }
 }
-
-// Large screens adjustments
-@media (min-width: $screen-lg-min) {}

@@ -1,9 +1,6 @@
 @import "../../../../scss/core/_variables.scss";
 @import "../../../../scss/core/_mixins.scss";
 
-// Extra small screens
-@media (max-width: $screen-xs-max) {}
-
 // General mobile version
 @media (max-width: $screen-sm-max) {
     .l-front-block {
@@ -66,6 +63,3 @@
         align-self: center;
     }
 }
-
-// Large screens adjustments
-@media (min-width: $screen-lg-min) {}
