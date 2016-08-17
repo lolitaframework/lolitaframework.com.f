@@ -24,13 +24,27 @@
         display: flex;
         flex-flow: row nowrap;
         justify-content: center;
-
         &.__with_logo {
-            background: url(../img/logo-footer.svg) left 50% bottom 36px no-repeat;
-            background-size: 94px 52px;
+            &.__hovered_logo {
+                &:after {
+                    @include transition(0.2s all);
+                    @include opacity(1);
+                }
+            }
+            &:after {
+                @include transition(0.2s all);
+                @include opacity(0.25);
+                content: ' ';
+                display: block;
+                width: 94px;
+                height: 52px;
+                background: url(../img/logo.svg) no-repeat;
+                background-size: contain;
+                position: absolute;
+                left: 50%;
+                bottom: 36px;
+                margin-left: -47px;
+            }
         }
     }
 }
-
-// Large screens adjustments
-@media (min-width: $screen-lg-min) {}
