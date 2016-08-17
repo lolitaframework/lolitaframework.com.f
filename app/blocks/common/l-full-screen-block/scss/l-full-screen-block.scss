@@ -24,6 +24,11 @@
         display: flex;
         flex-flow: row nowrap;
         justify-content: center;
+
+        &.__with_logo {
+            background: url(../img/logo-footer.svg) left 50% bottom 36px no-repeat;
+            background-size: 94px 52px;
+        }
     }
 }
 
