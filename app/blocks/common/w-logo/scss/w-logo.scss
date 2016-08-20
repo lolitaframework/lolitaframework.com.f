@@ -3,7 +3,7 @@
 
 
 // General mobile version
-@media (max-width: $screen-sm-max) {
+@media (max-width: $screen-xs-max) {
     .w-logo {
         @include hide-text();
         align-self: center;
@@ -22,7 +22,7 @@
 }
 
 // General desktop version
-@media (min-width: $screen-md-min) {
+@media (min-width: $screen-sm-min) {
     .w-logo {
         @include hide-text();
         &__link {

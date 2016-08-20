@@ -3,7 +3,7 @@
 
 
 // General mobile version
-@media (max-width: $screen-sm-max) {
+@media (max-width: $screen-xs-max) {
     .b-search-form {
         position: relative;
         &__input {
@@ -26,7 +26,7 @@
 }
 
 // General desktop version
-@media (min-width: $screen-md-min) {
+@media (min-width: $screen-sm-min) {
     .b-search-form {
         position: relative;
         &__input {

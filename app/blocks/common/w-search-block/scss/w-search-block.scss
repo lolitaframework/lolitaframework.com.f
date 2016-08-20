@@ -3,7 +3,7 @@
 
 
 // General mobile version
-@media (max-width: $screen-sm-max) {
+@media (max-width: $screen-xs-max) {
     .w-search-block {
         position: relative;
         width: 100%;
@@ -135,7 +135,7 @@
 }
 
 // General desktop version
-@media (min-width: $screen-md-min) {
+@media (min-width: $screen-sm-min) {
     .l-full-screen-block__item.w-search-block {
         align-self: center;
     }
