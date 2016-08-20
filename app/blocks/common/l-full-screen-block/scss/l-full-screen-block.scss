@@ -4,12 +4,16 @@
 
 // General mobile version
 @media (max-width: $screen-xs-max) {
-    .l-full-screen-block__item {
-        position: absolute;
-        top: 0;
-        right: 0;
-        left: 0;
-        height: auto;
+    .l-full-screen-block {
+        position: relative;
+        &__logo {
+            display: none;
+        }
+        &.__with_logo {
+            .l-full-screen-block__logo {
+                display: block;
+            }
+        }
     }
 }
 
@@ -24,26 +28,12 @@
         display: flex;
         flex-flow: row nowrap;
         justify-content: center;
+        &__logo {
+            display: none;
+        }
         &.__with_logo {
-            &.__hovered_logo {
-                &:after {
-                    @include transition(0.2s all);
-                    @include opacity(1);
-                }
-            }
-            &:after {
-                @include transition(0.2s all);
-                @include opacity(0.25);
-                content: ' ';
+            .l-full-screen-block__logo {
                 display: block;
-                width: 94px;
-                height: 52px;
-                background: url(../img/logo.svg) no-repeat;
-                background-size: contain;
-                position: absolute;
-                left: 50%;
-                bottom: 36px;
-                margin-left: -47px;
             }
         }
     }

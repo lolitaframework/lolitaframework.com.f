@@ -5,27 +5,13 @@
 // General mobile version
 @media (max-width: $screen-xs-max) {
     .b-attachment.l-full-screen-block__item {
+        position: relative;
         display: flex;
         align-items: center;
         padding-left: 15px;
         padding-right: 15px;
         padding-top: 80px;
         min-height: 1000px;
-
-        &:after {
-            @include transition(0.2s all);
-            @include opacity(0.25);
-            content: ' ';
-            display: block;
-            width: 94px;
-            height: 52px;
-            background: url(../img/logo.svg) no-repeat;
-            background-size: contain;
-            position: absolute;
-            left: 50%;
-            bottom: 36px;
-            margin-left: -47px;
-        }
     }
     .b-attachment {
         flex-flow: column nowrap;
