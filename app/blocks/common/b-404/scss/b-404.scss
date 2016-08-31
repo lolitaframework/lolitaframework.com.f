@@ -4,7 +4,7 @@
 
 // General mobile version
 @media (max-width: $screen-xs-max) {
-    .b-404.l-full-screen-block__item {
+    .b-404.l-full-screen__item {
         position: relative;
         padding-left: 15px;
         padding-right: 15px;
@@ -24,7 +24,7 @@
     }
 }
 
-.l-full-screen-block__item.b-404 {
+.l-full-screen__item.b-404 {
     align-self: center;
     margin-top: -50px;
 }
