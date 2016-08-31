@@ -8,6 +8,7 @@ var cleanCSS = require('gulp-clean-css');
 var uglify = require('gulp-uglify');
 var livereload = require('gulp-livereload');
 var watch = require('gulp-watch'); gulp.watch = watch;
+var autoprefixer = require('gulp-autoprefixer');
 
 
 gulp.task('watch', function() {
@@ -58,6 +59,10 @@ gulp.task('blocks.styles', function() {
         .on('end', function() {
             gulp.src(['app/blocks/common/**/css/*.css'])
                 .pipe(concat('blocks.common.css'))
+                .pipe(autoprefixer({
+                    browsers: ['> 1%'],
+                    cascade: false
+                }))
                 .pipe(gulp.dest('dist/css'))
                 .pipe(livereload());
         });
@@ -95,11 +100,19 @@ gulp.task('images', function() {
 gulp.task('styles', function() {
     gulp.src(['app/scss/libs.scss'])
         .pipe(sass().on('error', sass.logError))
+        .pipe(autoprefixer({
+            browsers: ['> 1%'],
+            cascade: false
+        }))
         .pipe(cleanCSS({ compatibility: 'ie10' }))
         .pipe(gulp.dest('dist/css'))
         .pipe(livereload());
     gulp.src(['app/scss/main.scss'])
         .pipe(sass().on('error', sass.logError))
+        .pipe(autoprefixer({
+            browsers: ['> 1%'],
+            cascade: false
+        }))
         .pipe(cleanCSS({ compatibility: 'ie10' }))
         .pipe(gulp.dest('dist/css'))
         .pipe(livereload());
