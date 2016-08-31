@@ -14,6 +14,8 @@
             height: 132px;
             background-repeat: no-repeat;
             background-size: contain;
+            // for Safari
+            background-position: center center;
         }
         &.__hidden {
             display: none;   
@@ -31,6 +33,8 @@
             height: 128px;
             background-repeat: no-repeat;
             background-size: contain;
+            // for Safari
+            background-position: center center;
         }
     }
 }
