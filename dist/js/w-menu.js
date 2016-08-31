@@ -5,20 +5,25 @@ $w_menu__container = $('.w-menu__container');
 $w_menu__undered_line = $('<span class="w-menu__undered-line"></span>');
 
 // get menu items weight
-$w_menu_items_width = 0;
-$w_menu__item.not(':last-child').each(
-	function() {
-		$w_menu_items_width = $w_menu_items_width + $(this).outerWidth();
-	}
-);
+function getMenuItemsWidth() {
+	$w_menu_items_width = 0;
+	$w_menu__item.not(':last').each(
+		function() {
+			$w_menu_items_width = $w_menu_items_width + $(this).outerWidth();
+		}
+	);
+	return $w_menu_items_width;
+}
 
 // add line into menu container
 $w_menu__container.append($w_menu__undered_line);
 $w_menu__item__has_submenu.hover( 
 	function() {
+		$w_menu_items_width = getMenuItemsWidth();
 		$w_menu__undered_line.animate({'width': $w_menu_items_width + 'px'}, 100);
 	},
 	function() {
+		$w_menu_items_width = getMenuItemsWidth();
 		$w_menu__undered_line.animate({'width': '0'}, 100);
 	}
 );
@@ -48,6 +53,6 @@ $w_menu__mb_menu_button.on('click',
 	function(e) {
 		e.preventDefault();
 		$('body').trigger('w_menu__mb_menu_button_click');
-		$w_menu__container.slideToggle('100');
+		$w_menu__container.toggle();
 	}
 );

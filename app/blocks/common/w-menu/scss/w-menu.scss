@@ -10,6 +10,7 @@
         height: 44px;
         background-color: #333333;
         &__container {
+            @include animation( drop-down-animation 0.3s);
             display: none;
             list-style: none;
             margin: 0;
@@ -160,21 +161,7 @@
                     vertical-align: middle;
                 }
                 &:hover .w-menu__sub-menu {
-                    @include opacity(1);
-                    @include transition(visibility 0s cubic-bezier(0.165,
-                    0.84,
-                    0.44,
-                    1) 0s,
-                    opacity 0.25s cubic-bezier(0.165,
-                    0.84,
-                    0.44,
-                    1),
-                    transform 0.25s cubic-bezier(0.165,
-                    0.84,
-                    0.44,
-                    1));
-                    @include transform(translate(0,
-                    0));
+                    @include animation( drop-down-animation 0.3s);
                     visibility: visible;
                 }
             }
@@ -198,21 +185,6 @@
             font-weight: 100;
         }
         &__sub-menu {
-            @include opacity(0);
-            @include transition(visibility 0s cubic-bezier(0.165,
-            0.84,
-            0.44,
-            1) 0.25s,
-            opacity 0.25s cubic-bezier(0.165,
-            0.84,
-            0.44,
-            1),
-            transform 0.25s cubic-bezier(0.165,
-            0.84,
-            0.44,
-            1));
-            @include transform(translate(0,
-            -5px));
             visibility: hidden;
             list-style: none;
             margin: 0;

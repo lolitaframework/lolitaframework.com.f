@@ -20,20 +20,24 @@
         display: flex;
         flex-flow: row nowrap;
         justify-content: center;
-        min-width: 300px;
+        min-width: 400px;
         min-height: 300px;
         &:hover {
             .l-front-block__item.w-logo {
                 @include opacity(0);
                 @include transition(0.3s all);
                 visibility: hidden;
-                position: absolute;
+                width: 0;
+                height: 0;
+                overflow: hidden;
             }
             .l-front-block__item.w-menu {
                 @include opacity(1);
                 @include transition(0.3s all);
                 visibility: visible;
-                position: relative;
+                width: auto;
+                height: auto;
+                overflow: visible;
             }
         }
         &__item {
@@ -41,22 +45,23 @@
                 @include opacity(1);
                 @include transition(0.3s all);
                 visibility: visible;
-                position: relative;
+                width: auto;
+                height: auto;
+                overflow: visible;
                 align-self: center;
             }
             &.w-menu {
                 @include opacity(0);
                 @include transition(0.3s all);
                 visibility: hidden;
-                position: absolute;
+                width: 0;
+                height: 0;
+                overflow: hidden;
                 align-self: center;
             }
         }
         &.__hidden {
-            @include opacity(0);
-            @include transition(0.3s all);
-            visibility: hidden;
-            position: absolute;
+            display: none;
         }
     }
     .l-full-screen-block__item.l-front-block {
