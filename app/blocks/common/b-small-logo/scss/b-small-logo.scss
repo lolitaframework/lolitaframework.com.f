@@ -1,13 +1,6 @@
 @import "../../../../scss/core/_variables.scss";
 @import "../../../../scss/core/_mixins.scss";
 
-.l-full-screen__logo.b-small-logo {
-	position: absolute;
-	left: 50%;
-	margin-left: -47px;
-	bottom: 36px;
-}
-
 .b-small-logo {
 	display: inline-block;
 	&__item {

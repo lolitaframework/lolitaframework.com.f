@@ -4,14 +4,6 @@
 
 // General mobile version
 @media (max-width: $screen-xs-max) {
-    .b-404.l-full-screen__item {
-        position: relative;
-        padding-left: 15px;
-        padding-right: 15px;
-        padding-top: 140px;
-        min-height: 1000px;
-        margin-top: 0 !important;
-    }
     .b-404 {
         &__title {
             font-size: 150px !important;
@@ -22,11 +14,6 @@
             line-height: 35px !important;
         }
     }
-}
-
-.l-full-screen__item.b-404 {
-    align-self: center;
-    margin-top: -50px;
 }
 
 .b-404 {
