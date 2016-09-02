@@ -1,5 +1,8 @@
 @import "../../../../scss/core/_variables.scss";
 @import "../../../../scss/core/_mixins.scss";
+//
+//
+//
 // General mobile version
 @media (max-width: $screen-xs-max) {
     .l-full-screen {
@@ -11,6 +14,9 @@
                 left: 50%;
                 margin-left: -47px;
                 bottom: 36px;
+            }
+            &--visible {
+                display: block;
             }
         }
         &__item {
@@ -30,11 +36,6 @@
                 padding-right: 15px;
                 padding-top: 80px;
                 min-height: 1000px;
-            }
-        }
-        &.__with_logo {
-            .l-full-screen__logo {
-                display: block;
             }
         }
     }
@@ -62,7 +63,7 @@
             &.b-attachment {
                 align-self: center;
             }
-            .w-search-block {
+            &.w-search-block {
                 align-self: center;
             }
         }
@@ -74,9 +75,7 @@
                 margin-left: -47px;
                 bottom: 36px;
             }
-        }
-        &.__with_logo {
-            .l-full-screen__logo {
+            &--visible {
                 display: block;
             }
         }

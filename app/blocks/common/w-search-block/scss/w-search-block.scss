@@ -1,5 +1,8 @@
 @import "../../../../scss/core/_variables.scss";
 @import "../../../../scss/core/_mixins.scss";
+//
+//
+//
 // General mobile version
 @media (max-width: $screen-xs-max) {
     .w-search-block {
@@ -105,10 +108,10 @@
             top: 15px;
             right: 15px;
         }
-        &.__hidden {
+        &--hidden {
             display: none;
         }
-        &.__visible {
+        &--visible {
             .w-search-block__form.b-search-form {
                 @include animation( slide-left-animation 1s 40ms both);
             }
@@ -221,10 +224,10 @@
             top: 0;
             right: -15px;
         }
-        &.__hidden {
+        &--hidden {
             display: none;
         }
-        &.__visible {
+        &--visible {
             .w-search-block__form.b-search-form {
                 @include animation( slide-left-animation 1s 40ms both);
             }

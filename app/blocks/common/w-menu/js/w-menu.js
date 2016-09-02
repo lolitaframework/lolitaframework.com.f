@@ -1,6 +1,6 @@
 $w_menu = $('.w-menu');
 $w_menu__item = $('.w-menu__item');
-$w_menu__item__has_submenu = $('.w-menu__item.__has_submenu');
+$w_menu__item__has_submenu = $('.w-menu__item.w-menu__item--has_submenu');
 $w_menu__container = $('.w-menu__container');
 $w_menu__undered_line = $('<span class="w-menu__undered-line"></span>');
 
@@ -29,7 +29,7 @@ $w_menu__item__has_submenu.hover(
 );
 
 // add search button trigger
-$w_menu__link__search = $('.w-menu__item.__search > .w-menu__link');
+$w_menu__link__search = $('.w-menu__link--search');
 $w_menu__link__search.on('click', 
 	function() {
 		$('body').trigger('w_menu__link__search_click')

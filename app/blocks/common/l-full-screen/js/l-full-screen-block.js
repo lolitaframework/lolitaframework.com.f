@@ -1,15 +1,15 @@
-$l_full_screen_block = $('.l-full-screen');
+$l_full_screen_logo = $('.l-full-screen__logo');
 
 $('body').on(
 	'w_menu__link__search_click',
 	function() {
-		$l_full_screen_block.addClass('__with_logo');
+		$l_full_screen_logo.addClass('l-full-screen__logo--visible');
 	}
 );
 
 $('body').on(
 	'w_search_block__close',
 	function() {
-		$l_full_screen_block.removeClass('__with_logo');	
+		$l_full_screen_logo.removeClass('l-full-screen__logo--visible');	
 	}
 );	

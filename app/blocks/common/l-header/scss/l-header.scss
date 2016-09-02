@@ -1,5 +1,8 @@
 @import "../../../../scss/core/_variables.scss";
 @import "../../../../scss/core/_mixins.scss";
+//
+//
+//
 .l-header {
     &__top {
         height: 40px;
@@ -11,7 +14,7 @@
             &__logo {
                 position: absolute !important;
                 top: 5px;
-                &.__hidden {
+                &--hidden {
                     display: none;
                 }
             }
@@ -20,7 +23,7 @@
                 top: 9px;
                 left: 201px;
                 right: 0;
-                &.__hidden {
+                &--hidden {
                     display: none;
                 }
             }

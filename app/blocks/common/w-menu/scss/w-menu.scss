@@ -1,5 +1,8 @@
 @import "../../../../scss/core/_variables.scss";
 @import "../../../../scss/core/_mixins.scss";
+//
+//
+//
 // General mobile version
 @media (max-width: $screen-xs-max) {
     .w-menu {
@@ -21,7 +24,7 @@
             &:first-child {
                 border-top: solid 1px #bfbfbf;
             }
-            &.__has_submenu {
+            &.w-menu__item--has_submenu {
                 .w-menu__link {
                     &:after {
                         @include rotate(-90deg);
@@ -37,7 +40,7 @@
                     }
                 }
             }
-            &.__search {
+            &.w-menu__item--search {
                 display: none;
             }
         }
@@ -130,6 +133,11 @@
             margin: 0;
             padding: 0;
             font-size: 0;
+            &--header {
+                display: flex;
+                flex-wrap: nowrap;
+                justify-content: space-between;
+            }
         }
         &__item {
             position: relative;
@@ -140,7 +148,7 @@
             &:last-child {
                 margin-right: 0;
             }
-            &.__has_submenu {
+            &--has_submenu {
                 position: relative;
                 padding-right: 35px;
                 &:after {
@@ -162,16 +170,8 @@
                     @include animation( drop-down-animation 0.3s);
                     visibility: visible;
                 }
-            }
-            &.__search {
-                .w-menu__link {
-                    @include hide-text();
-                    display: inline-block;
-                    width: 15px;
-                    height: 22px;
-                    background: url('../img/search-black.svg') 0 0 no-repeat;
-                    background-size: contain;
-                    vertical-align: middle;
+                &--disabled:after {
+                    display: none;
                 }
             }
         }
@@ -181,6 +181,21 @@
             text-decoration: none;
             color: #000;
             font-weight: 100;
+            &--white {
+                color: #fff;
+            }
+            &--search {
+                @include hide-text();
+                display: inline-block;
+                width: 15px;
+                height: 22px;
+                background: url('../img/search-black.svg') 0 0 no-repeat;
+                background-size: contain;
+                vertical-align: middle;
+            }
+            &--white-search {
+                background: url('../img/search-white.svg') 0 0 no-repeat;
+            }
         }
         &__sub-menu {
             visibility: hidden;
@@ -216,6 +231,9 @@
                     text-decoration: none;
                 }
             }
+            &--disabled {
+                display: none;
+            }
         }
         &__undered-line {
             display: block;
@@ -232,34 +250,6 @@
         }
         &__mb-menu-button {
             display: none;
-        }
-    }
-    .w-menu_header {
-        .w-menu {
-            &__container {
-                display: flex;
-                flex-wrap: nowrap;
-                justify-content: space-between;
-            }
-            &__link {
-                color: #fff;
-            }
-            &__item {
-                padding: 0;
-                &.__has_submenu {
-                    &:after {
-                        display: none;
-                    }
-                }
-                &.__search {
-                    .w-menu__link {
-                        background: url('../img/search-white.svg') 0 0 no-repeat;
-                    }
-                }
-            }
-            &__sub-menu {
-                display: none;
-            }
         }
     }
 }

@@ -1,6 +1,8 @@
 @import "../../../../scss/core/_variables.scss";
 @import "../../../../scss/core/_mixins.scss";
-
+//
+//
+//
 // General mobile version
 @media (max-width: $screen-xs-max) {
     .l-front-block {
@@ -60,7 +62,7 @@
                 align-self: center;
             }
         }
-        &.__hidden {
+        &--hidden {
             display: none;
         }
     }
