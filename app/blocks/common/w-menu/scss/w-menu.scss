@@ -1,7 +1,5 @@
 @import "../../../../scss/core/_variables.scss";
 @import "../../../../scss/core/_mixins.scss";
-
-
 // General mobile version
 @media (max-width: $screen-xs-max) {
     .w-menu {
@@ -234,6 +232,34 @@
         }
         &__mb-menu-button {
             display: none;
+        }
+    }
+    .l-header__top__container__menu.w-menu {
+        .w-menu {
+            &__container {
+                display: flex;
+                flex-wrap: nowrap;
+                justify-content: space-between;
+            }
+            &__link {
+                color: #fff;
+            }
+            &__item {
+                padding: 0;
+                &.__has_submenu {
+                    &:after {
+                        display: none;
+                    }
+                }
+                &.__search {
+                    .w-menu__link {
+                        background: url('../img/search-white.svg') 0 0 no-repeat;
+                    }
+                }
+            }
+            &__sub-menu {
+                display: none;
+            }
         }
     }
 }

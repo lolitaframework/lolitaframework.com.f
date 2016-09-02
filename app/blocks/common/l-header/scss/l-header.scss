@@ -1,0 +1,32 @@
+@import "../../../../scss/core/_variables.scss";
+@import "../../../../scss/core/_mixins.scss";
+
+
+.l-header {
+    &__top {
+        height: 40px;
+        background: #333333;
+        &__container {
+            position: relative;
+            width: 1200px;
+            margin: 0 auto;
+            &__logo {
+                position: absolute !important;
+                top: 5px;
+                &.__hidden {
+                    display: none;
+                }
+            }
+            &__menu {
+                position: absolute !important;
+                top: 9px;
+                left: 201px;
+                right: 0;
+                &.__hidden {
+                    display: none;
+                }
+            }
+        }
+    }
+    &__bottom {}
+}

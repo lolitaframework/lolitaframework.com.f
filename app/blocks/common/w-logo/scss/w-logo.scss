@@ -1,7 +1,5 @@
 @import "../../../../scss/core/_variables.scss";
 @import "../../../../scss/core/_mixins.scss";
-
-
 // General mobile version
 @media (max-width: $screen-xs-max) {
     .w-logo {
@@ -18,7 +16,7 @@
             background-position: center center;
         }
         &.__hidden {
-            display: none;   
+            display: none;
         }
     }
 }
@@ -35,6 +33,14 @@
             background-size: contain;
             // for Safari
             background-position: center center;
+        }
+    }
+    .l-header__top__container__logo.w-logo {
+        .w-logo {
+            &__link {
+                width: 77px;
+                height: 30px;
+            }
         }
     }
 }

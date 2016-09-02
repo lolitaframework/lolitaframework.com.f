@@ -121,9 +121,6 @@
 
 // General desktop version
 @media (min-width: $screen-sm-min) {
-    .l-full-screen__item.w-search-block {
-        align-self: center;
-    }
     .w-search-block {
         @include opacity(1);
         @include transition(0.3s all);
@@ -227,6 +224,16 @@
             }
             .w-search-block__results {
                 @include animation( drop-down-animation 0.3s);
+            }
+        }
+    }
+    .l-full-screen__item.w-search-block {
+        align-self: center;
+    }
+    .l-header__top__container__search.w-search-block {
+        .b-search-form {
+            &__input {
+                background-color: transparent;
             }
         }
     }
