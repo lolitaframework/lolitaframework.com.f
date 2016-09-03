@@ -8,6 +8,7 @@
     .w-logo {
         @include hide-text();
         align-self: center;
+        text-align: center;
         margin-top: 54px;
         &__link {
             display: inline-block;

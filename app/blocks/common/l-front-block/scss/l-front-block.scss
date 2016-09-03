@@ -25,7 +25,7 @@
         min-width: 400px;
         min-height: 300px;
         &:hover {
-            .l-front-block__item.w-logo {
+            .l-front-block__w-logo {
                 @include opacity(0);
                 @include transition(0.3s all);
                 visibility: hidden;
@@ -33,7 +33,7 @@
                 height: 0;
                 overflow: hidden;
             }
-            .l-front-block__item.w-menu {
+            .l-front-block__w-menu {
                 @include opacity(1);
                 @include transition(0.3s all);
                 visibility: visible;
@@ -42,25 +42,23 @@
                 overflow: visible;
             }
         }
-        &__item {
-            &.w-logo {
-                @include opacity(1);
-                @include transition(0.3s all);
-                visibility: visible;
-                width: auto;
-                height: auto;
-                overflow: visible;
-                align-self: center;
-            }
-            &.w-menu {
-                @include opacity(0);
-                @include transition(0.3s all);
-                visibility: hidden;
-                width: 0;
-                height: 0;
-                overflow: hidden;
-                align-self: center;
-            }
+        &__w-logo {
+            @include opacity(1);
+            @include transition(0.3s all);
+            visibility: visible;
+            width: auto;
+            height: auto;
+            overflow: visible;
+            align-self: center;
+        }
+        &__w-menu {
+            @include opacity(0);
+            @include transition(0.3s all);
+            visibility: hidden;
+            width: 0;
+            height: 0;
+            overflow: hidden;
+            align-self: center;
         }
         &--hidden {
             display: none;

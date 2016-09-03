@@ -9,6 +9,7 @@ var uglify = require('gulp-uglify');
 var livereload = require('gulp-livereload');
 var watch = require('gulp-watch'); gulp.watch = watch;
 var autoprefixer = require('gulp-autoprefixer');
+var rigger = require('gulp-rigger');
 
 
 gulp.task('watch', function() {
@@ -122,6 +123,7 @@ gulp.task('styles', function() {
 
 gulp.task('templates', function() {
     gulp.src(['app/*.html'])
+        .pipe(rigger())
         .pipe(gulp.dest('dist/'))
         .pipe(livereload());
 });
@@ -180,7 +182,7 @@ gulp.task('default', function() {
 
     /* Tempaltes */
 
-    gulp.watch('app/*.html', function(event) {
+    gulp.watch(['app/*.html', 'app/blocks/**/**/*.html'], function(event) {
         gulp.run('templates');
     });
 

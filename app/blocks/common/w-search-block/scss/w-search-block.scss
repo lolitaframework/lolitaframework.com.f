@@ -112,7 +112,7 @@
             display: none;
         }
         &--visible {
-            .w-search-block__form.b-search-form {
+            .b-search-form {
                 @include animation( slide-left-animation 1s 40ms both);
             }
             &:before {
@@ -228,7 +228,7 @@
             display: none;
         }
         &--visible {
-            .w-search-block__form.b-search-form {
+            .b-search-form {
                 @include animation( slide-left-animation 1s 40ms both);
             }
             &:before {

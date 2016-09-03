@@ -7,26 +7,26 @@
     &__top {
         height: 40px;
         background: #333333;
-        &__container {
-            position: relative;
-            width: 1200px;
-            margin: 0 auto;
-            &__logo {
-                position: absolute !important;
-                top: 5px;
-                &--hidden {
-                    display: none;
-                }
-            }
-            &__menu {
-                position: absolute !important;
-                top: 9px;
-                left: 201px;
-                right: 0;
-                &--hidden {
-                    display: none;
-                }
-            }
+    }
+    &__wide-container {
+        position: relative;
+        width: 1200px;
+        margin: 0 auto;
+    }
+    &__w-logo {
+        position: absolute !important;
+        top: 5px;
+        &--hidden {
+            display: none;
+        }
+    }
+    &__w-menu {
+        position: absolute !important;
+        top: 9px;
+        left: 201px;
+        right: 0;
+        &--hidden {
+            display: none;
         }
     }
     &__bottom {}

@@ -106,6 +106,9 @@
             -moz-user-select: none;
             -ms-user-select: none;
             user-select: none;
+            &--hidden {
+                display: none;
+            }
         }
         &__mb-menu-button {
             @include hide-text();
@@ -119,6 +122,13 @@
             position: absolute;
             top: 16px;
             right: 15px;
+            &--opened {
+                top: 15px;
+                width: 17px;
+                height: 16px;
+                background: url('../img/button-x-white.svg') 0 0 no-repeat;
+                background-size: contain;
+            }
         }
     }
 }

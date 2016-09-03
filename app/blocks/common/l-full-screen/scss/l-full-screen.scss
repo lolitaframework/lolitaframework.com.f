@@ -1,0 +1,76 @@
+@import "../../../../scss/core/_variables.scss";
+@import "../../../../scss/core/_mixins.scss";
+//
+//
+//
+// General mobile version
+@media (max-width: $screen-xs-max) {
+    .l-full-screen {
+        position: relative;
+        &__b-404 {
+            position: relative;
+            padding-left: 15px;
+            padding-right: 15px;
+            padding-top: 140px;
+            min-height: 1000px;
+            margin-top: 0 !important;
+        }
+        &__b-small-logo {
+            display: none;
+            position: absolute;
+            left: 50%;
+            margin-left: -47px;
+            bottom: 36px;
+            &--visible {
+                display: block;
+            }
+        }
+        &__b-attachment {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-left: 15px;
+            padding-right: 15px;
+            padding-top: 80px;
+            min-height: 1000px;
+        }
+    }
+}
+
+// General desktop version
+@media (min-width: $screen-sm-min) {
+    .l-full-screen {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        &__b-404 {
+            align-self: center;
+            margin-top: -50px;
+        }
+        &__b-small-logo {
+            display: none;
+            position: absolute;
+            left: 50%;
+            margin-left: -47px;
+            bottom: 36px;
+            &--visible {
+                display: block;
+            }
+        }
+        &__b-attachment {
+            align-self: center;
+        }
+        &__w-search-block {
+            align-self: center;
+        }
+        &__l-front-block {
+            align-self: center;
+        }
+    }
+}

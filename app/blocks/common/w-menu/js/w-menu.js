@@ -53,6 +53,8 @@ $w_menu__mb_menu_button.on('click',
 	function(e) {
 		e.preventDefault();
 		$('body').trigger('w_menu__mb_menu_button_click');
+		$w_menu__mb_menu_button.toggleClass('w-menu__mb-menu-button--opened');
+		$w_menu__mb_search.toggleClass('w-menu__mb-search--hidden');
 		$w_menu__container.toggle();
 	}
 );
