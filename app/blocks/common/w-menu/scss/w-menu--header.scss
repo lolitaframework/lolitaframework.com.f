@@ -1,0 +1,43 @@
+@import "../../../../scss/core/_variables.scss";
+@import "../../../../scss/core/_mixins.scss";
+//
+//
+//
+// General mobile version
+@media (max-width: $screen-xs-max) {
+    .w-menu.w-menu--header {
+        .w-menu {
+            
+        }
+    }
+}
+
+// General desktop version
+@media (min-width: $screen-sm-min) {
+    .w-menu.w-menu--header {
+        .w-menu {
+            &__container {
+                display: flex;
+                flex-wrap: nowrap;
+                justify-content: space-between;
+            }
+            &__item {
+                &--has_submenu {
+                    &:after {
+                        display: none;
+                    }
+                }
+            }
+            &__link {
+                color: #fff;
+                &--search {
+                    background: url('../img/search-white.svg') 0 0 no-repeat;
+                    background-size: contain;
+                }
+            }
+            &__sub-menu {
+                display: none;
+            }
+        }
+    }
+}

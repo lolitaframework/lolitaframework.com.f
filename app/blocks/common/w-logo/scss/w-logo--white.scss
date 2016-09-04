@@ -1,0 +1,23 @@
+@import "../../../../scss/core/_variables.scss";
+@import "../../../../scss/core/_mixins.scss";
+//
+//
+//
+// General mobile version
+@media (max-width: $screen-xs-max) {
+    .w-logo.w-logo--white {
+        .w-logo {}
+    }
+}
+
+// General desktop version
+@media (min-width: $screen-sm-min) {
+    .w-logo.w-logo--white {
+        .w-logo {
+            &__link {
+                width: 77px;
+                height: 30px;
+            }
+        }
+    }
+}

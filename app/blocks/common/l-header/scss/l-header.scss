@@ -29,5 +29,9 @@
             display: none;
         }
     }
+    &__w-search-block {
+        display: flex;
+        justify-content: center;
+    }
     &__bottom {}
 }
