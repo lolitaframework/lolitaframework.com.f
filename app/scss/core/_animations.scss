@@ -1,14 +1,14 @@
 //slide to left side animation
 @-webkit-keyframes slide-left-animation {
     0% {
-    	@include opacity(0);
+        @include opacity(0);
         -webkit-transform: translate3d(100px, 0, 0);
         transform: translate3d(100px, 0, 0);
         -webkit-animation-timing-function: cubic-bezier(0.11393, 0.8644, 0.14684, 1);
         animation-timing-function: cubic-bezier(0.11393, 0.8644, 0.14684, 1)
     }
     100% {
-    	@include opacity(1);
+        @include opacity(1);
         -webkit-transform: translateZ(0);
         transform: translateZ(0)
     }
@@ -16,14 +16,14 @@
 
 @keyframes slide-left-animation {
     0% {
-    	@include opacity(0);
+        @include opacity(0);
         -webkit-transform: translate3d(100px, 0, 0);
         transform: translate3d(100px, 0, 0);
         -webkit-animation-timing-function: cubic-bezier(0.11393, 0.8644, 0.14684, 1);
         animation-timing-function: cubic-bezier(0.11393, 0.8644, 0.14684, 1)
     }
     100% {
-    	@include opacity(1);
+        @include opacity(1);
         -webkit-transform: translateZ(0);
         transform: translateZ(0)
     }
@@ -43,15 +43,15 @@
     }
 }
 
-@keyframes drop-down-animation {
+@keyframes opacity-transition-animation {
     0% {
         @include opacity(0);
-        @include transition(visibility 0s cubic-bezier(0.165, 0.84, 0.44, 1) 0.25s, opacity 0.25s cubic-bezier(0.165, 0.84, 0.44, 1), transform 0.25s cubic-bezier(0.165, 0.84, 0.44, 1));
-        @include transform(translate(0, -5px));
+        @include transition(0.3s all);
     }
     100% {
         @include opacity(1);
-        @include transition(visibility 0s cubic-bezier(0.165, 0.84, 0.44, 1) 0s, opacity 0.25s cubic-bezier(0.165, 0.84, 0.44, 1), transform 0.25s cubic-bezier(0.165, 0.84, 0.44, 1));
-        @include transform(translate(0, 0));
+        @include transition(0.3s all);
     }
 }
+
+//opacity transition animation

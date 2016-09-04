@@ -14,9 +14,7 @@
 // General desktop version
 @media (min-width: $screen-sm-min) {
     .l-front-block {
-        @include opacity(1);
-        @include transition(0.3s all);
-        visibility: visible;
+        @include animation( opacity-transition-animation 0.5s);        
         position: relative;
         align-self: center;
         display: flex;
@@ -26,37 +24,22 @@
         min-height: 300px;
         &:hover {
             .l-front-block__w-logo {
-                @include opacity(0);
-                @include transition(0.3s all);
-                visibility: hidden;
-                width: 0;
-                height: 0;
-                overflow: hidden;
+                display: none;
             }
             .l-front-block__w-menu {
-                @include opacity(1);
-                @include transition(0.3s all);
-                visibility: visible;
-                width: auto;
-                height: auto;
+                @include animation( opacity-transition-animation 0.5s);
+                display: block;
                 overflow: visible;
             }
         }
         &__w-logo {
-            @include opacity(1);
-            @include transition(0.3s all);
-            visibility: visible;
-            width: auto;
-            height: auto;
+            @include animation( opacity-transition-animation 0.5s);
+            display: block;
             overflow: visible;
             align-self: center;
         }
         &__w-menu {
-            @include opacity(0);
-            @include transition(0.3s all);
-            visibility: hidden;
-            width: 0;
-            height: 0;
+            display: none;
             overflow: hidden;
             align-self: center;
         }
