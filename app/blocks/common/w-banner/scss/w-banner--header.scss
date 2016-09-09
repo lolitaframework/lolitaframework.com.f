@@ -1,0 +1,24 @@
+@import "../../../../scss/core/_variables.scss";
+@import "../../../../scss/core/_mixins.scss";
+//
+//
+//
+// General mobile version
+@media (max-width: $screen-xs-max) {
+    .w-banner.w-banner--header {
+        .w-banner {}
+    }
+}
+
+// General desktop version
+@media (min-width: $screen-sm-min) {
+    .w-banner.w-banner--header {
+        .w-banner {
+            &__image {
+                background-position: center bottom;
+                width: 100%;
+                height: 500px;
+            }
+        }
+    }
+}

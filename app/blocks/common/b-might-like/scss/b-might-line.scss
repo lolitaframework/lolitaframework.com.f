@@ -1,0 +1,42 @@
+@import "../../../../scss/core/_variables.scss";
+@import "../../../../scss/core/_mixins.scss";
+//
+//
+//
+.b-might-like {
+    &__title {
+        border-bottom: 1px solid #000;
+        margin-top: 0;
+        margin-bottom: 20px;
+    }
+    &__items {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__item {
+        &__link {
+            display: block;
+            text-decoration: none;
+        }
+        &__image {
+            display: block;
+            margin-bottom: 20px;
+        }
+        &__caption {
+            font-weight: bold;
+            font-size: 16px;
+            color: #333333;
+            text-decoration: none;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+        &__meta {
+            font-weight: 100;
+            font-size: 16px;
+            color: #BFBFBF;
+        }
+    }
+}

@@ -1,0 +1,42 @@
+@import "../../../../scss/core/_variables.scss";
+@import "../../../../scss/core/_mixins.scss";
+//
+//
+//
+// General mobile version
+@media (max-width: $screen-xs-max) {
+    .b-article {}
+}
+
+// General desktop version
+@media (min-width: $screen-sm-min) {
+    .b-article {
+        &__header {
+            margin-top: 50px;
+            margin-bottom: 63px;
+            &__categories {
+                display: flex;
+                justify-content: center;
+            }
+            &__title {
+                text-align: center;
+                font-weight: 100;
+                line-height: 87px;
+                font-size: 64px;
+                color: #333333;
+            }
+            &__meta {
+                text-align: center;
+                font-weight: 100;
+                font-size: 12px;
+                line-height: 17px;
+                color: #A19B9B;
+            }
+        }
+        &__content {
+        }
+        &__footer {
+
+        }
+    }
+}
