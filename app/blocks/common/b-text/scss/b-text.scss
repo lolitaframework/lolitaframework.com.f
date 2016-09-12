@@ -27,6 +27,14 @@
         font-size: 16px;
         color: #333333;
     }
+    blockquote {
+        border-left: 2px solid #979797;
+        p {
+            font-style: italic;
+            font-size: 16px;
+            color: #4A4A4A;
+        }
+    }
     // Default Wordpress Classes
     .alignnone {
         margin: 5px 20px 20px 0;

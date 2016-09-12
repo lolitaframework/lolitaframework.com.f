@@ -1,0 +1,124 @@
+@import "../../../../scss/core/_variables.scss";
+@import "../../../../scss/core/_mixins.scss";
+//
+//
+//
+.b-comments {
+    &__title {
+        border-bottom: 1px solid #000;
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+    &__items {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    &__item {
+        display: flex;
+        flex-flow: row nowrap;
+        position: relative;
+        width: 100%;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #E5E5E5;
+        &__img {
+            flex-shrink: 0;
+            font-size: 0;
+            display: inline-block;
+            width: 60px;
+            height: 60px;
+            border: 5px solid #F1F1F1;
+            border-radius: 100px;
+            margin-right: 20px;
+        }
+        &__comment {
+            padding-right: 110px;
+            &__author {
+                font-weight: bold;
+                font-size: 14px;
+                line-height: 19px;
+                color: #242424;
+            }
+            &__meta {
+                font-size: 9px;
+                line-height: 13px;
+                color: #9B9B9B;
+            }
+            &__text {
+                /* Everybody sucks! I’m: */
+                font-size: 14px;
+                line-height: 19px;
+                color: #333333;
+            }
+            &__reply {
+                display: block;
+                text-align: center;
+                width: 73px;
+                height: 20px;
+                line-height: 22px;
+                font-weight: 100;
+                font-size: 12px;
+                color: #333333;
+                text-decoration: none;
+                text-transform: uppercase;
+                border: 1px solid #000;
+                border-radius: 12px;
+                position: absolute;
+                right: 15px;
+                top: 30px;
+            }
+        }
+    }
+    &__post-form {
+        padding-top: 30px;
+        &__caption {
+            display: block;
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 19px;
+            color: #333333;
+            margin-bottom: 22px;
+        }
+        &__label {
+            display: block;
+            font-size: 14px;
+            line-height: 19px;
+            color: #333333;
+            margin-bottom: 20px;
+            &__text {
+                display: inline-block;
+                width: 157px;
+            }
+        }
+        &__input {
+            width: 250px;
+            height: 44px;
+            border: 1px solid #E5E5E5;
+            outline: none;
+            border-radius: 3px;
+        }
+        &__textarea {
+            display: block;
+            width: 100%;
+            height: 136px;
+            border: 1px solid #E5E5E5;
+            outline: none;
+            resize: none;
+            margin-top: 5px;
+        }
+        &__submit {
+            width: 150px;
+            height: 36px;
+            padding: 0;
+            line-height: 34px;
+            border: 1px solid #000;
+            font-weight: 100;
+            font-size: 16px;
+            color: #333333;
+            background: #fff;
+            border-radius: 20px;
+            outline: none;
+        }
+    }
+}
