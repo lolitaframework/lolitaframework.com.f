@@ -1,0 +1,1 @@
+$w_folow = $('.w-folow');
