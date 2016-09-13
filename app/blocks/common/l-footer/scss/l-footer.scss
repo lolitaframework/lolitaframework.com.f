@@ -1,0 +1,13 @@
+@import "../../../../scss/core/_variables.scss";
+@import "../../../../scss/core/_mixins.scss";
+//
+//
+//
+.l-footer {
+	&__row {
+		margin-bottom: 60px;
+		&:last-child {
+			margin-bottom: 40px;
+		}
+	}
+}
