@@ -3,6 +3,57 @@
 //
 //
 //
+// General mobile version
+@media (max-width: $screen-xs-max) {
+    .b-comments {
+        &__title {
+            margin-left: -15px;
+            margin-right: -15px;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        &__item {
+            flex-flow: row wrap !important;
+            justify-content: flex-start;
+            &__img {}
+            &__comment {
+                width: 100%;
+                padding-top: 58px;
+                padding-right: 0 !important;
+                margin-top: -70px;
+                &__author {
+                    padding-left: 90px;
+                    position: relative;
+                    top: -36px;
+                }
+                &__meta {
+                    padding-left: 90px;
+                    position: relative;
+                    top: -36px;
+                }
+                &__reply {
+                    top: 20px !important;
+                    right: 0 !important;
+                }
+            }
+        }
+        &__post-form {
+            padding-top: 20px !important;
+            &__label {
+                &__text {
+                    margin-bottom: 10px !important;
+                }
+            }
+            &__input {
+                width: 100% !important;
+            }
+            &__submit {
+                width: 100% !important;
+            }
+        }
+    }
+}
+
 .b-comments {
     &__title {
         border-bottom: 1px solid #000;
@@ -26,8 +77,8 @@
             flex-shrink: 0;
             font-size: 0;
             display: inline-block;
-            width: 60px;
-            height: 60px;
+            width: 65px;
+            height: 65px;
             border: 5px solid #F1F1F1;
             border-radius: 100px;
             margin-right: 20px;
@@ -57,7 +108,7 @@
                 text-align: center;
                 width: 73px;
                 height: 20px;
-                line-height: 22px;
+                line-height: 20px;
                 font-weight: 100;
                 font-size: 12px;
                 color: #333333;
@@ -114,10 +165,12 @@
             width: 100%;
             height: 136px;
             border: 1px solid #E5E5E5;
+            border-radius: 3px;
             outline: none;
             resize: none;
             margin-top: 5px;
             padding: 5px 8px;
+            max-width: 100%;
             &:focus {
                 border: 1px solid #333333;
             }

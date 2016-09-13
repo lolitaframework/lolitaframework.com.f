@@ -1,6 +1,10 @@
 @import "core/variables";
 @import "core/mixins";
 
+* {
+	box-sizing: border-box;
+}
+
 body {
 	font-family: $font-family-sans-serif;
 }

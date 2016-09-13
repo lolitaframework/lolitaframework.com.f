@@ -3,16 +3,25 @@
 //
 //
 //
+// General mobile version
+@media (max-width: $screen-xs-max) {
+    .l-footer {
+        &__row {
+            margin-bottom: 30px !important;
+        }
+    }
+}
+
 .l-footer {
-	&__row {
-		margin-bottom: 60px;
-		&:last-child {
-			margin-bottom: 40px;
-		}
-		&--centered {
-			display: flex;
-			flex-flow: row;
-			justify-content: center;
-		}
-	}
+    &__row {
+        margin-bottom: 60px;
+        &:last-child {
+            margin-bottom: 40px;
+        }
+        &--centered {
+            display: flex;
+            flex-flow: row;
+            justify-content: center;
+        }
+    }
 }
