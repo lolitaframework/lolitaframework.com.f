@@ -13,6 +13,7 @@
             display: inline-block;
             margin-right: 10px;
             &__link {
+                @include transition(0.3s all);
                 display: block;
                 background: #E5E5E5;
                 font-weight: 100;
@@ -23,6 +24,7 @@
                 text-decoration: none;
                 padding: 0 5px;
                 &:hover {
+                    @include transition(0.3s all);
                     background: #333333;
                     color: #FFFFFF;
                 }

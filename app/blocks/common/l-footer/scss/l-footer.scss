@@ -9,5 +9,10 @@
 		&:last-child {
 			margin-bottom: 40px;
 		}
+		&--centered {
+			display: flex;
+			flex-flow: row;
+			justify-content: center;
+		}
 	}
 }

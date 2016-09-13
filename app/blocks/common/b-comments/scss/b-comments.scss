@@ -52,6 +52,7 @@
                 color: #333333;
             }
             &__reply {
+                @include transition(0.2s all);
                 display: block;
                 text-align: center;
                 width: 73px;
@@ -67,6 +68,11 @@
                 position: absolute;
                 right: 15px;
                 top: 30px;
+                &:hover {
+                    @include transition(0.3s all);
+                    background-color: #000;
+                    color: #fff;
+                }
             }
         }
     }
@@ -97,6 +103,11 @@
             border: 1px solid #E5E5E5;
             outline: none;
             border-radius: 3px;
+            padding-left: 8px;
+            padding-right: 8px;
+            &:focus {
+                border: 1px solid #333333;
+            }
         }
         &__textarea {
             display: block;
@@ -106,8 +117,13 @@
             outline: none;
             resize: none;
             margin-top: 5px;
+            padding: 5px 8px;
+            &:focus {
+                border: 1px solid #333333;
+            }
         }
         &__submit {
+            @include transition(0.3s all);
             width: 150px;
             height: 36px;
             padding: 0;
@@ -119,6 +135,11 @@
             background: #fff;
             border-radius: 20px;
             outline: none;
+            &:hover {
+                @include transition(0.3s all);
+                background-color: #000;
+                color: #fff;
+            }
         }
     }
 }
