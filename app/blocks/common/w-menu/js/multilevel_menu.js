@@ -4,7 +4,7 @@ var LolitaFramework;
         function MultilevelMenu(menu_selector, sub_menu_selector, max_screen_width) {
             if (menu_selector === void 0) { menu_selector = null; }
             if (sub_menu_selector === void 0) { sub_menu_selector = null; }
-            if (max_screen_width === void 0) { max_screen_width = 768; }
+            if (max_screen_width === void 0) { max_screen_width = 767; }
             this.menu_selector = null;
             this.$menu = null;
             this.menu_item_selector = 'li';

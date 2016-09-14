@@ -106,7 +106,7 @@
             background-size: contain;
             position: absolute;
             top: 15px;
-            right: 15px;
+            right: 15px !important;
         }
         &--hidden {
             display: none;
@@ -121,6 +121,15 @@
             .w-search-block__results {
                 @include animation( drop-down-animation 0.3s);
             }
+        }
+    }
+}
+
+//Fix for close button
+@media (min-width: $screen-xs-max+1) and (max-width: 830px) {
+    .w-search-block {
+        &__close {
+            right: 0 !important;
         }
     }
 }

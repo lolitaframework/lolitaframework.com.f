@@ -52,6 +52,9 @@
             line-height: 18px;
             text-decoration: none;
             color: #000;
+            &--search {
+                display: none !important;
+            }
         }
         &__sub-menu {
             display: none;
@@ -89,6 +92,9 @@
                 text-decoration: none;
                 color: #000;
             }
+        }
+        &__undered-line {
+            display: none !important;
         }
         &__mb-search {
             @include hide-text();

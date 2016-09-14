@@ -2,7 +2,7 @@ $w_folow = $('.w-folow');
 $w_folow_frame = $w_folow.find('.w-folow__frame');
 
 
-if (jQuery(window).width() > 768) {
+if (jQuery(window).width() > 767) {
     $w_folow_frame.sly({
         horizontal: 1,
         itemNav: 'centered',

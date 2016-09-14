@@ -6,8 +6,15 @@
 // General mobile version
 @media (max-width: $screen-xs-max) {
     .w-folow {
+        &__items {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+        }
         &__item {
-        	width: 50%;
+            flex-grow: 1;
+            max-width: 240px;
+        	width: auto !important;
             &__image {
                 @include img-responsive();
                 width: 100% !important;

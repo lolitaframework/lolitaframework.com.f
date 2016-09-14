@@ -36,7 +36,7 @@ namespace LolitaFramework {
         /**
          * Constructor
          */
-        constructor(menu_selector: string = null, sub_menu_selector: string = null, max_screen_width: number = 768) {
+        constructor(menu_selector: string = null, sub_menu_selector: string = null, max_screen_width: number = 767) {
 
             if (jQuery(window).width() > max_screen_width) {
                 return;
