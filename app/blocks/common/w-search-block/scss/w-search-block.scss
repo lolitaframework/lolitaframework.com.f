@@ -6,12 +6,12 @@
 // General mobile version
 @media (max-width: $screen-xs-max) {
     .w-search-block {
-        position: absolute;
+        position: absolute !important;
         top: 0;
         left: 0;
         right: 0;
         background-color: #fff;
-        z-index: 10000;
+        z-index: 10000 !important;
         &:before {
             content: ' ';
             display: block;
@@ -143,6 +143,8 @@
         position: relative;
         width: 753px;
         max-width: 100%;
+        position: relative;
+        z-index: 10000;
         &:before {
             content: ' ';
             display: block;

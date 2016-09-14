@@ -36,7 +36,9 @@
     flex-flow: row nowrap;
     margin-bottom: 30px;
     &__thumbnail {
+        display: block;
         margin-right: 20px;
+        text-decoration: none;
         &__image {
             display: block;
             width: 200px;
@@ -56,9 +58,16 @@
             font-weight: normal;
             font-size: 36px;
             line-height: 36px;
-            color: #333333;
             margin-top: -5px;
             margin-bottom: 10px;
+            &__link {
+                color: #333333;
+                display: block;
+                text-decoration: none;
+                &:hover {
+                    color: #08C;
+                }
+            }
         }
         &__excerpt {
             font-weight: normal;
