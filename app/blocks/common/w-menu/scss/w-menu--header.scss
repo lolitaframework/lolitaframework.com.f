@@ -19,6 +19,8 @@
                 padding: 0;
                 position: absolute;
                 top: 44px;
+                position: relative;
+                z-index: 2;
             }
             &__item {
                 border-bottom: solid 1px #bfbfbf;
