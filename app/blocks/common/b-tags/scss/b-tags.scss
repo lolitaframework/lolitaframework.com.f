@@ -1,0 +1,34 @@
+@import "../../../../scss/core/_variables.scss";
+@import "../../../../scss/core/_mixins.scss";
+//
+//
+//
+.b-tags {
+    &__list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        font-size: 0;
+        &__item {
+            display: inline-block;
+            margin-right: 10px;
+            &__link {
+                @include transition(0.3s all);
+                display: block;
+                background: #E5E5E5;
+                font-weight: 100;
+                font-size: 9px;
+                height: 24px;
+                line-height: 24px;
+                color: #7F7F7F;
+                text-decoration: none;
+                padding: 0 5px;
+                &:hover {
+                    @include transition(0.3s all);
+                    background: #333333;
+                    color: #FFFFFF;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,253 @@
+@import "../../../../scss/core/_variables.scss";
+@import "../../../../scss/core/_mixins.scss";
+//
+//
+//
+// General mobile version
+@media (max-width: $screen-xs-max) {
+    .w-search-block {
+        position: absolute !important;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: #fff;
+        z-index: 10000 !important;
+        &:before {
+            content: ' ';
+            display: block;
+            width: 15px;
+            height: 22px;
+            background: url('../img/search-black.svg') 0 0 no-repeat;
+            background-size: contain;
+            position: absolute;
+            top: 12px;
+            left: 15px;
+            z-index: 1;
+        }
+        &__form {
+            .b-search-form {
+                width: 100%;
+            }
+        }
+        &__results {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        &__item {
+            &:last-child {
+                margin-bottom: 0;
+            }
+            &:hover {
+                background-color: #333333;
+                .w-search-block__text {
+                    h3 {
+                        color: #fff;
+                    }
+                    p {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+        &__link {
+            display: flex;
+            padding-left: 8px;
+            padding-right: 8px;
+            flex-flow: row nowrap;
+            height: 100px;
+            text-decoration: none;
+            color: #000;
+            &:hover {
+                background-color: #333333;
+                .w-search-block__text {
+                    h3 {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+        &__img {
+            flex-shrink: 0;
+            align-self: center;
+            font-size: 0;
+            display: inline-block;
+            width: 65px;
+            height: 65px;
+            border: 5px solid #E9E9E9;
+            border-radius: 100px;
+            margin-right: 12px;
+        }
+        &__text {
+            align-self: center;
+            h3 {
+                font-size: 20px;
+                line-height: 20px;
+                font-weight: 100;
+                padding: 0;
+                margin: 0;
+                margin-bottom: 2.5px;
+                b {
+                    font-weight: bold;
+                }
+            }
+            p {
+                display: none;
+            }
+        }
+        &__close {
+            @include hide-text();
+            display: block;
+            border: 0;
+            outline: 0;
+            width: 15px;
+            height: 15px;
+            background: url('../img/button-x.svg') 0 0 no-repeat;
+            background-size: contain;
+            position: absolute;
+            top: 15px;
+            right: 15px !important;
+        }
+        &--hidden {
+            display: none;
+        }
+        &--visible {
+            .b-search-form {
+                @include animation( slide-left-animation 1s 40ms both);
+            }
+            &:before {
+                @include animation( slide-left-animation 1s 40ms both);
+            }
+            .w-search-block__results {
+                @include animation( drop-down-animation 0.3s);
+            }
+        }
+    }
+}
+
+//Fix for close button
+@media (min-width: $screen-xs-max+1) and (max-width: 830px) {
+    .w-search-block {
+        &__close {
+            right: 0 !important;
+        }
+    }
+}
+
+// General desktop version
+@media (min-width: $screen-sm-min) {
+    .w-search-block {
+        @include opacity(1);
+        @include transition(0.3s all);
+        visibility: visible;
+        position: relative;
+        width: 753px;
+        max-width: 100%;
+        position: relative;
+        z-index: 10000;
+        &:before {
+            content: ' ';
+            display: block;
+            width: 15px;
+            height: 22px;
+            background: url('../img/search-black.svg') 0 0 no-repeat;
+            background-size: contain;
+            position: absolute;
+            top: 0;
+            left: -25px;
+        }
+        &__form {
+            .b-search-form {
+                width: 100%;
+                margin-bottom: 5px;
+            }
+        }
+        &__results {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        &__item {
+            padding-top: 15px;
+            padding-bottom: 15px;
+            padding-left: 10px;
+            padding-right: 10px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+            &:hover {
+                background-color: #333333;
+                .w-search-block__text {
+                    h3 {
+                        color: #fff;
+                    }
+                    p {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+        &__link {
+            display: block;
+            display: flex;
+            flex-flow: row nowrap;
+            text-decoration: none;
+            color: #000;
+        }
+        &__img {
+            flex-shrink: 0;
+            font-size: 0;
+            display: inline-block;
+            width: 65px;
+            height: 65px;
+            border: 5px solid #E9E9E9;
+            border-radius: 100px;
+            margin-right: 12px;
+        }
+        &__text {
+            h3 {
+                font-size: 20px;
+                line-height: 20px;
+                font-weight: 100;
+                padding: 0;
+                margin: 0;
+                margin-bottom: 2.5px;
+                b {
+                    font-weight: bold;
+                }
+            }
+            p {
+                font-size: 14px;
+                padding: 0;
+                margin: 0;
+            }
+        }
+        &__close {
+            @include hide-text();
+            display: block;
+            border: 0;
+            outline: 0;
+            width: 15px;
+            height: 15px;
+            background: url('../img/button-x.svg') 0 0 no-repeat;
+            background-size: contain;
+            position: absolute;
+            top: 0;
+            right: -15px;
+        }
+        &--hidden {
+            display: none;
+        }
+        &--visible {
+            .b-search-form {
+                @include animation( slide-left-animation 1s 40ms both);
+            }
+            &:before {
+                @include animation( slide-left-animation 1s 40ms both);
+            }
+            .w-search-block__results {
+                @include animation( drop-down-animation 0.3s);
+            }
+        }
+    }
+}
