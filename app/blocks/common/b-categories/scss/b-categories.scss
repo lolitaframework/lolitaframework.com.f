@@ -1,0 +1,32 @@
+@import "../../../../scss/core/_variables.scss";
+@import "../../../../scss/core/_mixins.scss";
+//
+//
+//
+.b-categories {
+    &__list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        &__item {
+            display: inline-block;
+            font-size: 0;
+            border-right: 1px solid #0088CC;
+            padding-left: 3px;
+            padding-right: 6px;
+            &:last-child {
+                border-right: 0;
+            }
+            &__link {
+                display: inline-block;
+                font-size: 16px;
+                font-weight: 100;
+                color: #0088CC;
+                text-decoration: none;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}

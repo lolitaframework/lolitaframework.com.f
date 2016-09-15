@@ -1,0 +1,47 @@
+@import "../../../../scss/core/_variables.scss";
+@import "../../../../scss/core/_mixins.scss";
+//
+//
+//
+// General mobile version
+@media (max-width: $screen-xs-max) {
+    .b-404 {
+        &__title {
+            font-size: 150px !important;
+            line-height: 150px !important;
+        }
+        &__subtitle {
+            font-size: 35px !important;
+            line-height: 35px !important;
+        }
+    }
+}
+
+.b-404 {
+    &__title {
+        font-size: 200px;
+        line-height: 200px;
+        font-weight: 800;
+        text-align: center;
+        color: #333333;
+    }
+    &__subtitle {
+        font-size: 50px;
+        line-height: 50px;
+        text-align: center;
+        color: #333333;
+        position: relative;
+        top: -20px;
+    }
+    &__close {
+        @include hide-text();
+        display: block;
+        width: 15px;
+        height: 15px;
+        background: url('../img/button-x.svg') 0 0 no-repeat;
+        background-size: contain;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+    }
+}

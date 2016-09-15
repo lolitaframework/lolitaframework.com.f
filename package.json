@@ -1,0 +1,37 @@
+{
+  "name": "front_end_boilerplate",
+  "version": "1.0.1",
+  "description": "Boilerplate",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Vitaliy Shebela",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-clean-css": "^2.0.12",
+    "gulp-concat": "^2.6.0",
+    "gulp-flatten": "^0.3.0",
+    "gulp-image": "^2.4.1",
+    "gulp-livereload": "^3.8.1",
+    "gulp-rigger": "^0.5.8",
+    "gulp-sass": "^2.3.2",
+    "gulp-uglify": "^2.0.0",
+    "gulp-watch": "^4.3.9",
+    "through": "^2.3.8"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pwcofficial/front_end_boilerplate.git"
+  },
+  "keywords": [
+    "front-end",
+    "bilerplate"
+  ],
+  "bugs": {
+    "url": "https://github.com/pwcofficial/front_end_boilerplate/issues"
+  },
+  "homepage": "https://github.com/pwcofficial/front_end_boilerplate#readme"
+}

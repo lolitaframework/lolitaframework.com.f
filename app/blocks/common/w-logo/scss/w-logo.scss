@@ -1,0 +1,42 @@
+@import "../../../../scss/core/_variables.scss";
+@import "../../../../scss/core/_mixins.scss";
+//
+//
+//
+// General mobile version
+@media (max-width: $screen-xs-max) {
+    .w-logo {
+        @include hide-text();
+        align-self: center;
+        text-align: center;
+        margin-top: 54px;
+        &__link {
+            display: inline-block;
+            width: 233px;
+            height: 132px;
+            background-repeat: no-repeat;
+            background-size: contain;
+            // for Safari
+            background-position: center center;
+        }
+        &--hidden {
+            display: none;
+        }
+    }
+}
+
+// General desktop version
+@media (min-width: $screen-sm-min) {
+    .w-logo {
+        @include hide-text();
+        &__link {
+            display: inline-block;
+            width: 262px;
+            height: 128px;
+            background-repeat: no-repeat;
+            background-size: contain;
+            // for Safari
+            background-position: center center;
+        }
+    }
+}

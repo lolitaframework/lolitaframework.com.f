@@ -1,0 +1,38 @@
+@import "../../../../scss/core/_variables.scss";
+@import "../../../../scss/core/_mixins.scss";
+//
+//
+//
+// General mobile version
+@media (max-width: $screen-xs-max) {
+    .w-search-block.w-search-block--header {
+        .w-search-block {}
+    }
+}
+
+// General desktop version
+@media (min-width: $screen-sm-min) {
+    .w-search-block.w-search-block--header {
+        @include container();
+        position: relative;
+        &:before {
+            background: url('../img/search-white.svg') 0 0 no-repeat;
+            background-size: contain;
+            position: absolute;
+            top: 9px;
+            left: 15px;
+        }
+        .w-search-block {
+            &__close {
+                background: url('../img/button-x-white.svg') 0 0 no-repeat;
+                background-size: contain;
+                top: 13px;
+                right: 15px;
+            }
+            &__results {
+            	background-color: #fff;
+            	padding: 26px 25px 28px 30px;
+            }
+        }
+    }
+}

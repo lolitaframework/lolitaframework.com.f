@@ -1,0 +1,50 @@
+@import "../../../../scss/core/_variables.scss";
+@import "../../../../scss/core/_mixins.scss";
+//
+//
+//
+// General mobile version
+@media (max-width: $screen-xs-max) {
+    .l-front-block {
+        display: flex;
+        flex-flow: column nowrap;
+    }
+}
+
+// General desktop version
+@media (min-width: $screen-sm-min) {
+    .l-front-block {
+        @include animation( opacity-transition-animation 0.5s);        
+        position: relative;
+        align-self: center;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        min-width: 400px;
+        min-height: 300px;
+        &:hover {
+            .l-front-block__w-logo {
+                display: none;
+            }
+            .l-front-block__w-menu {
+                @include animation( opacity-transition-animation 0.5s);
+                display: block;
+                overflow: visible;
+            }
+        }
+        &__w-logo {
+            @include animation( opacity-transition-animation 0.5s);
+            display: block;
+            overflow: visible;
+            align-self: center;
+        }
+        &__w-menu {
+            display: none;
+            overflow: hidden;
+            align-self: center;
+        }
+        &--hidden {
+            display: none;
+        }
+    }
+}
