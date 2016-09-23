@@ -43,6 +43,7 @@
     }
 }
 
+//opacity transition animation
 @keyframes opacity-transition-animation {
     0% {
         @include opacity(0);
@@ -54,4 +55,3 @@
     }
 }
 
-//opacity transition animation
