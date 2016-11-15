@@ -7,6 +7,13 @@
 @media (max-width: $screen-xs-max) {
     .b-post-preview {
         display: block !important;
+        &--no-image {
+            flex-flow: column nowrap;
+            .b-post-preview__thumbnail {
+                margin-left: 0;
+                margin-right: 0;
+            }
+        }
         &__thumbnail {
             margin-right: -15px !important;
             margin-left: -15px;
@@ -35,6 +42,15 @@
     display: flex;
     flex-flow: row nowrap;
     margin-bottom: 30px;
+    &--no-image {
+        flex-flow: column nowrap;
+        .b-post-preview__thumbnail {
+            &__meta {
+                text-align: left;
+                margin-bottom: 15px;
+            }
+        }
+    }
     &__thumbnail {
         display: block;
         margin-right: 20px;
