@@ -30,11 +30,20 @@
 
 .b-attachment {
     display: flex;
+    &--file {
+        .b-attachment__image {
+            background-image: url('../img/b-attachment--file.png') !important;
+            background-size: 60%;
+        }
+    }
     &__image {
         display: block;
         align-self: center;
         width: 250px;
         height: 250px;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-size: contain;
         border-radius: 200px;
         border: 10px solid #E9E9E9;
         margin-right: 40px;
