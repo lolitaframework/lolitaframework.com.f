@@ -12,28 +12,38 @@
             padding-left: 15px;
             padding-right: 15px;
         }
+        &__sub-items {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            padding-left: 20px !important;
+            margin-top: 20px !important;
+        }
         &__item {
-            flex-flow: row wrap !important;
-            justify-content: flex-start;
-            &__img {}
             &__comment {
+                flex-flow: column wrap !important;
+                justify-content: flex-start;
                 width: 100%;
                 padding-top: 58px;
                 padding-right: 0 !important;
                 margin-top: -70px;
-                &__author {
-                    padding-left: 90px;
-                    position: relative;
-                    top: -36px;
-                }
-                &__meta {
-                    padding-left: 90px;
-                    position: relative;
-                    top: -36px;
-                }
-                &__reply {
-                    top: 20px !important;
-                    right: 0 !important;
+                &__img {}
+                &__inner {
+                    margin-top: -20px;
+                    &__author {
+                        padding-left: 75px;
+                        position: relative;
+                        top: -28px;
+                    }
+                    &__meta {
+                        padding-left: 75px;
+                        position: relative;
+                        top: -28px;
+                    }
+                    &__reply {
+                        top: 20px !important;
+                        right: 0 !important;
+                    }
                 }
             }
         }
@@ -65,64 +75,74 @@
         margin: 0;
         padding: 0;
     }
+    &__sub-items {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        padding-left: 80px;
+        margin-top: 30px;
+    }
     &__item {
-        display: flex;
-        flex-flow: row nowrap;
         position: relative;
         width: 100%;
         padding-top: 20px;
         padding-bottom: 20px;
         border-bottom: 1px solid #E5E5E5;
-        &__img {
-            flex-shrink: 0;
-            font-size: 0;
-            display: inline-block;
-            width: 65px;
-            height: 65px;
-            border: 5px solid #F1F1F1;
-            border-radius: 100px;
-            margin-right: 20px;
-        }
         &__comment {
-            padding-right: 110px;
-            &__author {
-                font-weight: bold;
-                font-size: 14px;
-                line-height: 19px;
-                color: #242424;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: flex-start;
+            &__img {
+                flex-shrink: 0;
+                font-size: 0;
+                display: inline-block;
+                width: 65px;
+                height: 65px;
+                border: 5px solid #F1F1F1;
+                border-radius: 100px;
+                margin-right: 20px;
             }
-            &__meta {
-                font-size: 9px;
-                line-height: 13px;
-                color: #9B9B9B;
-            }
-            &__text {
-                /* Everybody sucks! I’m: */
-                font-size: 14px;
-                line-height: 19px;
-                color: #333333;
-            }
-            &__reply {
-                @include transition(0.2s all);
-                display: block;
-                text-align: center;
-                width: 73px;
-                height: 20px;
-                line-height: 20px;
-                font-weight: 100;
-                font-size: 12px;
-                color: #333333;
-                text-decoration: none;
-                text-transform: uppercase;
-                border: 1px solid #000;
-                border-radius: 12px;
-                position: absolute;
-                right: 15px;
-                top: 30px;
-                &:hover {
-                    @include transition(0.3s all);
-                    background-color: #000;
-                    color: #fff;
+            &__inner {
+                flex-shrink: 1;
+                &__author {
+                    font-weight: bold;
+                    font-size: 14px;
+                    line-height: 19px;
+                    color: #242424;
+                }
+                &__meta {
+                    font-size: 9px;
+                    line-height: 13px;
+                    color: #9B9B9B;
+                }
+                &__text {
+                    max-width: 700px;
+                    font-size: 14px;
+                    line-height: 19px;
+                    color: #333333;
+                }
+                &__reply {
+                    @include transition(0.2s all);
+                    display: block;
+                    text-align: center;
+                    width: 73px;
+                    height: 20px;
+                    line-height: 20px;
+                    font-weight: 100;
+                    font-size: 12px;
+                    color: #333333;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    border: 1px solid #000;
+                    border-radius: 12px;
+                    position: absolute;
+                    right: 15px;
+                    top: 30px;
+                    &:hover {
+                        @include transition(0.3s all);
+                        background-color: #000;
+                        color: #fff;
+                    }
                 }
             }
         }

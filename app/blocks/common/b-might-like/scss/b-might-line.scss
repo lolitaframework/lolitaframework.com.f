@@ -15,11 +15,15 @@
         &__items {
             flex-flow: row wrap;
             justify-content: space-around !important;
+            margin-left: 0px !important;
+            margin-right: 0px !important;
         }
         &__item {
             display: block;
             max-width: none !important;
             padding-bottom: 20px;
+            margin-left: 0px !important;
+            margin-right: 0px !important;
             &__link {
                 display: block;
                 text-decoration: none;
