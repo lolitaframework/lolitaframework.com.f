@@ -31,7 +31,17 @@
             }
             &__results {
                 background-color: #fff;
-                padding: 26px 25px 28px 30px;
+                // padding: 26px 25px 28px 30px;
+            }
+            &__item {
+                margin-right: 25px;
+                margin-left: 30px;
+                &:first-child {
+                    margin-top: 26px;
+                }
+                &:last-child {
+                    margin-bottom: 28px;
+                }
             }
         }
     }
