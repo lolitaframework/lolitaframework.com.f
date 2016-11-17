@@ -1,5 +1,5 @@
-var $w_search_block = $('.w-search-block');
-var $w_search_block__close = $('.w-search-block__close');
+var $w_search_block = jQuery('.w-search-block');
+var $w_search_block__close = jQuery('.w-search-block__close');
 
 // add overlay
 var $overlay = jQuery('<div id="overlay"></div>');
@@ -15,7 +15,7 @@ $overlay.css({
 jQuery('body').prepend($overlay);
 
 
-$('body').on('w_menu__link__search_click',
+jQuery('body').on('w_menu__link__search_click',
     function() {
         $w_search_block.removeClass('w-search-block--hidden');
         $w_search_block.addClass('w-search-block--visible');
@@ -32,6 +32,6 @@ $w_search_block__close.on('click',
         if ($w_search_block.hasClass('w-search-block--header')) {
             $overlay.hide();
         }
-        $('body').trigger('w_search_block__close');
+        jQuery('body').trigger('w_search_block__close');
     }
 );

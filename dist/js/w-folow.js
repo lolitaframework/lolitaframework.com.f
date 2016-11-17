@@ -1,4 +1,4 @@
-$w_folow = $('.w-folow');
+$w_folow = jQuery('.w-folow');
 $w_folow_frame = $w_folow.find('.w-folow__frame');
 
 

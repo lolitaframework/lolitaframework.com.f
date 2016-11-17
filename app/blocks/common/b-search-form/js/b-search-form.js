@@ -1,8 +1,8 @@
-$b_search_form__input = $('.b-search-form--header .b-search-form__input, .b-search-form--header .b-search-form__input');
-$b_search_form_archive__input = $('.b-search-form--archive .b-search-form__input');
-$b_search_form__clear = $('.b-search-form__clear');
+$b_search_form__input = jQuery('.b-search-form--header .b-search-form__input, .b-search-form--header .b-search-form__input');
+$b_search_form_archive__input = jQuery('.b-search-form--archive .b-search-form__input');
+$b_search_form__clear = jQuery('.b-search-form__clear');
 
-$('body').on('w_menu__link__search_click',
+jQuery('body').on('w_menu__link__search_click',
     function() {
         $b_search_form__input.focus();
     }
