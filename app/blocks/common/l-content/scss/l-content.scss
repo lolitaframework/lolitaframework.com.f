@@ -4,11 +4,11 @@
 //
 //
 .l-content {
-	@include container();
-	&__row {
-		margin-bottom: 30px;
-		&:last-child {
-			margin-bottom: 0;
-		}
-	}
+    @include container();
+    &__row {
+        margin-bottom: 30px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
 }

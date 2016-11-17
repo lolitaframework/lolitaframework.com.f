@@ -14,7 +14,7 @@
 // General desktop version
 @media (min-width: $screen-sm-min) {
     .l-front-block {
-        @include animation( opacity-transition-animation 0.5s);        
+        @include animation( opacity-transition-animation 0.5s);
         position: relative;
         align-self: center;
         display: flex;

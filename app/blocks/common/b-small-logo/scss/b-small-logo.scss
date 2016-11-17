@@ -4,18 +4,18 @@
 //
 //
 .b-small-logo {
-	display: inline-block;
-	&__item {
-		@include opacity(0.3);
-		@include transition(0.3s all);
-		display: block;
-		width: 94px;
-		height: 52px;
-		background-repeat: no-repeat;
-		background-size: contain;
-		&:hover {
-			@include opacity(1);
-			@include transition(0.3s all);
-		}
-	}
+    display: inline-block;
+    &__item {
+        @include opacity(0.3);
+        @include transition(0.3s all);
+        display: block;
+        width: 94px;
+        height: 52px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        &:hover {
+            @include opacity(1);
+            @include transition(0.3s all);
+        }
+    }
 }

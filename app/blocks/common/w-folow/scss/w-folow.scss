@@ -14,14 +14,13 @@
         &__item {
             flex-grow: 1;
             max-width: 160px;
-        	width: auto !important;
+            width: auto !important;
             &__image {
                 @include img-responsive();
                 width: 100% !important;
                 height: auto !important;
             }
-            &__desc {
-            }
+            &__desc {}
         }
     }
 }
