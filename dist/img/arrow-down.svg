@@ -1,1 +1,15 @@
-<svg width="12" height="8" viewBox="0 0 12 8" xmlns="http://www.w3.org/2000/svg"><title>6ACAB602-30B0-4C04-B703-84DCAE557E35</title><g stroke="#000" fill="none" fill-rule="evenodd" stroke-linecap="square"><path d="M10.975 1.525l-4.95 4.95M1.025 1.525l4.95 4.95"/></g></svg>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="12px" height="8px" viewBox="0 0 12 8" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>6ACAB602-30B0-4C04-B703-84DCAE557E35</title>
+    <desc>Created with sketchtool.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
+        <g id="Arrow-down" stroke="#000000">
+            <g id="Arrow" transform="translate(1.000000, 1.000000)">
+                <path d="M5.02512627,0.525126266 L9.97487373,5.47487373" id="Line" transform="translate(7.500000, 3.000000) scale(-1, 1) translate(-7.500000, -3.000000) "></path>
+                <path d="M0.0251262658,0.525126266 L4.97487373,5.47487373" id="Line"></path>
+            </g>
+        </g>
+    </g>
+</svg>

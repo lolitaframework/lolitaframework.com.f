@@ -7,7 +7,8 @@ var sass = require('gulp-sass');
 var cleanCSS = require('gulp-clean-css');
 var uglify = require('gulp-uglify');
 var livereload = require('gulp-livereload');
-var watch = require('gulp-watch'); gulp.watch = watch;
+var watch = require('gulp-watch');
+gulp.watch = watch;
 var autoprefixer = require('gulp-autoprefixer');
 var rigger = require('gulp-rigger');
 
@@ -20,7 +21,6 @@ gulp.task('watch', function() {
 
 gulp.task('blocks.images', function() {
     gulp.src(['app/blocks/**/**/img/*'])
-        .pipe(image())
         .pipe(flatten())
         .pipe(gulp.dest('dist/img'))
         .pipe(livereload());
@@ -91,7 +91,6 @@ gulp.task('scripts', function() {
 
 gulp.task('images', function() {
     gulp.src(['app/img/*.*'])
-        .pipe(image())
         .pipe(gulp.dest('dist/img'))
         .pipe(livereload());
 });
