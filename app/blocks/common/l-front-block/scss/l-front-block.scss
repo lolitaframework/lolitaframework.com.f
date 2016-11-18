@@ -43,8 +43,70 @@
             overflow: hidden;
             align-self: center;
         }
+        &__here-arrow {
+            display: none;
+            width: 75px;
+            height: 79px;
+            background: url('../img/l-front-block--here.svg') 0 0 no-repeat;
+            background-size: contain;
+            position: absolute;
+            left: -20px;
+            bottom: 0;
+            z-index: $zindex-popover;
+        }
+        &__here-arrow--visible {
+            display: block;
+            animation-name: shake;
+            animation-delay: 1s;
+            animation-duration: 2s;
+        }
+        &__here-arrow--hidden {
+            visibility: hidden;
+            transition: 0.2s all;
+            opacity: 0;
+        }
         &--hidden {
             display: none;
         }
+    }
+}
+
+@-webkit-keyframes shake {
+    10%,
+    90% {
+        transform: translate3d(-1px, 1px, 0);
+    }
+    20%,
+    80% {
+        transform: translate3d(2px, -2px, 0);
+    }
+    30%,
+    50%,
+    70% {
+        transform: translate3d(-4px, 4px, 0);
+    }
+    40%,
+    60% {
+        transform: translate3d(4px, -4px, 0);
+    }
+}
+
+@keyframes shake {
+    10%,
+    90% {
+        transform: translate3d(-1px, 1px, 0);
+    }
+    20%,
+    80% {
+        transform: translate3d(2px, -2px, 0);
+    }
+    30%,
+    50%,
+    70% {
+        transform: translate3d(-4px, 4px, 0);
+    }
+    40%,
+    60% {
+        transform: translate3d(4px, -4px, 0);
     }
 }
