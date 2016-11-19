@@ -87,3 +87,26 @@
         }
     }
 }
+
+@media (max-width: $screen-xs-max) {
+    .b-get-in-touch {
+        margin-bottom: 123px;
+        &__title {
+            min-height: 49px;
+            font-size: 36px;
+            font-weight: 300;
+            font-style: normal;
+            font-stretch: normal;
+            text-align: center;
+            color: #333333;
+        }
+        &__form {
+            &__input {}
+            &__textarea {}
+            &__submit {
+                display: block;
+                width: 100%;
+            }
+        }
+    }
+}
