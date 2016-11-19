@@ -29,7 +29,6 @@
         margin-bottom: 30px;
     }
     &__items {
-        list-style: none;
         margin: 0;
         padding: 0;
         display: flex;
@@ -37,6 +36,7 @@
         margin-left: -15px;
         margin-right: -15px;
         &__item {
+            display: block;
             background-position: 50% 50%;
             background-size: cover;
             background-repeat: no-repeat;
@@ -49,6 +49,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            text-decoration: none;
             &__name {
                 display: inline-block;
                 line-height: 33px;
