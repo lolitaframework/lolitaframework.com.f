@@ -178,7 +178,7 @@
             &:last-child {
                 margin-bottom: 0;
             }
-            &:hover {
+            &.w-search-block__item--active {
                 background-color: #333333;
                 .w-search-block__text {
                     h3 {
