@@ -1,0 +1,89 @@
+@import "../../../../scss/core/_variables.scss";
+@import "../../../../scss/core/_mixins.scss";
+//
+//
+//
+.b-get-in-touch {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    &__title {
+        min-height: 87px;
+        font-size: 64px;
+        font-weight: 300;
+        font-style: normal;
+        font-stretch: normal;
+        text-align: center;
+        color: #333333;
+        margin-top: 0;
+        margin-bottom: 50px;
+    }
+    &__form {
+        width: 500px;
+        max-width: 100%;
+        text-align: right;
+        &__input {
+            @include placeholder(#e5e5e5);
+            display: block;
+            margin-bottom: 30px;
+            width: 100%;
+            height: 44px;
+            border-radius: 3px;
+            border: solid 1px #e5e5e5;
+            padding-left: 10px;
+            padding-right: 10px;
+            font-size: 14px;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            outline: none;
+            &:focus {
+                border: solid 1px #333333;
+            }
+        }
+        &__textarea {
+            @include placeholder(#e5e5e5);
+            display: block;
+            margin-bottom: 30px;
+            width: 100%;
+            height: 238px;
+            border-radius: 3px;
+            border: solid 1px #e5e5e5;
+            padding: 10px;
+            font-size: 14px;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            outline: none;
+            resize: none;
+            &:focus {
+                border: solid 1px #333333;
+            }
+        }
+        &__submit {
+            @include transition(0.2s all);
+            display: inline-block;
+            text-align: center;
+            width: 150px;
+            height: 36px;
+            line-height: 34px;
+            border-radius: 100px;
+            border: solid 1px #333333;
+            font-size: 16px;
+            font-weight: 300;
+            font-style: normal;
+            font-stretch: normal;
+            text-align: center;
+            text-decoration: none;
+            color: #262626;
+            background-color: #fff;
+            padding-top: 0;
+            padding-bottom: 0;
+            &:hover {
+                @include transition(0.3s all);
+                background-color: #000;
+                color: #fff;
+            }
+        }
+    }
+}
