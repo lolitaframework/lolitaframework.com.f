@@ -15,46 +15,36 @@
 </head>
 
 <body>
-    <!-- l-header -->
-    <header class="l-header">
-        <div class="l-header__top">
-            <div class="l-header__wide-container">
-                <div class="l-header__w-logo">
-                    //= blocks/common/w-logo/w-logo--white.html
-                </div>
-                <div class="l-header__w-menu">
-                    //= blocks/common/w-menu/w-menu--header.html
-                </div>
-                <div class="l-header__w-search-block l-header__w-search-block--hidden">
-                    //= blocks/common/w-search-block/w-search-block--header.html
-                </div>
-            </div>
-        </div>
-        <div class="l-header__botton">
-            //= blocks/common/w-banner/w-banner--header.html
-        </div>
+    <!-- l-like-window  -->
+    <header class="l-like-window
+">
+        <a class="l-like-window__back" href="#">Back</a>
     </header>
-    <!-- /l-header -->
+    <!-- /header -->
+    <!-- /l-like-window  -->
     <!-- l-content -->
     <div class="l-content">
         <div class="l-content__wrapper">
-            <div class="l-content__row">
-                //= blocks/common/b-article/b-article.html
+            <div class="l-content__row l-content__row--showcase">
+                //= blocks/common/b-latest-projects/b-latest-projects.html
             </div>
-            <div class="l-content__row">
-                //= blocks/common/b-might-like/b-might-like.html
+            <div class="l-content__row l-content__row--showcase l-content__row--color1">
+                //= blocks/common/b-services/b-services.html
             </div>
-            <div class="l-content__row">
-                //= blocks/common/b-comments/b-comments.html
+            <div class="l-content__row l-content__row--showcase">
+                //= blocks/common/b-products/b-products.html
+            </div>
+            <div class="l-content__row l-content__row--showcase l-content__row--color1">
+                //= blocks/common/b-request-a-quote/b-request-a-quote.html
+            </div>
+            <div class="l-content__row l-content__row--showcase">
+                //= blocks/common/b-stories/b-stories.html
             </div>
         </div>
     </div>
     <!-- /l-content -->
     <!-- l-footer -->
     <div class="l-footer">
-        <div class="l-footer__row">
-            //= blocks/common/w-folow/w-folow.html
-        </div>
         <div class="l-footer__row">
             //= blocks/common/w-social-buttons/w-social-buttons.html
         </div>
@@ -63,6 +53,7 @@
         </div>
     </div>
     <!-- /l-footer -->
+    <!-- /l-full-screen -->
     <!-- SCRIPTS -->
     <script type="text/javascript" src="./js/jquery-2.2.4.js"></script>
     <script type="text/javascript" src="./js/jquery.sly.min.js"></script>

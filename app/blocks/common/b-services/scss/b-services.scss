@@ -1,0 +1,55 @@
+@import "../../../../scss/core/_variables.scss";
+@import "../../../../scss/core/_mixins.scss";
+//
+//
+//
+.b-services {
+    &__title {
+        height: 87px;
+        font-size: 64px;
+        font-weight: 300;
+        font-style: normal;
+        font-stretch: normal;
+        text-align: center;
+        color: #333333;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    &__desc {
+        height: 33px;
+        font-size: 16px;
+        font-weight: 300;
+        font-style: normal;
+        font-stretch: normal;
+        text-align: center;
+        color: #333333;
+        padding-bottom: 11px;
+        border-bottom: solid 1px #e5e5e5;
+        margin-bottom: 30px;
+    }
+    &__items {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        &__item {
+            position: relative;
+            width: 192px;
+            &__image {
+                display: block;
+                width: 100%;
+                height: 47px;
+                background-repeat: no-repeat;
+                background-position: 50% 50%;
+            }
+            &__name {
+                display: block;
+                min-height: 21px;
+                margin-top: 10px;
+                text-align: center;
+            }
+        }
+    }
+}

@@ -4,11 +4,34 @@
 //
 //
 .l-content {
-    @include container();
+    max-width: 100%;
+    overflow-x: hidden;
+    &__wrapper {
+        @include container();
+    }
     &__row {
         margin-bottom: 30px;
         &:last-child {
             margin-bottom: 0;
+        }
+        &.l-content__row--showcase {
+            margin: 0;
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+        &.l-content__row--color1 {
+            position: relative;
+            &:before {
+                content: ' ';
+                display: block;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                right: -3000px;
+                left: -3000px;
+                background-color: #F5F4F5;
+                z-index: -1;
+            }
         }
     }
 }

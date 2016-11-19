@@ -1,0 +1,72 @@
+@import "../../../../scss/core/_variables.scss";
+@import "../../../../scss/core/_mixins.scss";
+//
+//
+//
+// General mobile version
+.b-products {
+    &__title {
+        height: 87px;
+        font-size: 64px;
+        font-weight: 300;
+        font-style: normal;
+        font-stretch: normal;
+        text-align: center;
+        color: #333333;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    &__desc {
+        height: 33px;
+        font-size: 16px;
+        font-weight: 300;
+        font-style: normal;
+        font-stretch: normal;
+        text-align: center;
+        color: #333333;
+        padding-bottom: 11px;
+        border-bottom: solid 1px #e5e5e5;
+        margin-bottom: 30px;
+        a {
+            color: #0088cc;
+            text-decoration: none;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+    &__items {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        padding-bottom: 31px;
+        &__item {
+            position: relative;
+            width: 340px;
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: center;
+            &__image {
+                display: block;
+                width: 128px;
+                height: 128px;
+                border-radius: 100px;
+                background-repeat: no-repeat;
+                background-position: 50% 50%;
+                margin-bottom: 20px;
+            }
+            &__desc {
+                display: block;
+                font-size: 16px;
+                font-weight: 300;
+                font-style: normal;
+                font-stretch: normal;
+                text-align: center;
+                color: #333333;
+            }
+        }
+    }
+}

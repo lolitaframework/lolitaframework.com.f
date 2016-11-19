@@ -1,0 +1,93 @@
+@import "../../../../scss/core/_variables.scss";
+@import "../../../../scss/core/_mixins.scss";
+//
+//
+//
+// General mobile version
+@media (max-width: $screen-xs-max) {
+    .b-latest-projects {}
+}
+
+.b-latest-projects {
+    text-align: center;
+    &__title {
+        height: 87px;
+        font-size: 64px;
+        font-weight: 300;
+        font-style: normal;
+        font-stretch: normal;
+        text-align: center;
+        color: #333333;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    &__desc {
+        height: 33px;
+        font-size: 16px;
+        font-weight: 300;
+        font-style: normal;
+        font-stretch: normal;
+        text-align: center;
+        color: #333333;
+        padding-bottom: 11px;
+        border-bottom: solid 1px #e5e5e5;
+        margin-bottom: 30px;
+    }
+    &__items {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-flow: row wrap;
+        margin-left: -15px;
+        margin-right: -15px;
+        &__item {
+            margin-left: 15px;
+            margin-right: 15px;
+            width: 340px;
+            height: 260px;
+            border-radius: 4px;
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &__name {
+                display: inline-block;
+                line-height: 33px;
+                font-size: 24px;
+                font-weight: 300;
+                font-style: normal;
+                font-stretch: normal;
+                text-align: center;
+                color: #ffffff;
+            }
+        }
+        &__load-more {
+            position: relative;
+            display: inline-block;
+            line-height: 22px;
+            font-size: 16px;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            text-align: center;
+            color: #333333;
+            text-decoration: none;
+            padding-top: 16px;
+            &:hover {
+                text-decoration: underline;
+            }
+            &:before {
+                content: ' ';
+                display: block;
+                width: 16px;
+                height: 16px;
+                background-color: red;
+                position: absolute;
+                left: 50%;
+                top: 0px;
+                margin-left: -8px;
+            }
+        }
+    }
+}
