@@ -5,7 +5,7 @@
 //
 .b-services {
     &__title {
-        height: 87px;
+        min-height: 87px;
         font-size: 64px;
         font-weight: 300;
         font-style: normal;
@@ -16,7 +16,7 @@
         margin-bottom: 0;
     }
     &__desc {
-        height: 33px;
+        min-height: 33px;
         font-size: 16px;
         font-weight: 300;
         font-style: normal;
@@ -49,6 +49,34 @@
                 min-height: 21px;
                 margin-top: 10px;
                 text-align: center;
+            }
+        }
+    }
+}
+
+@media (max-width: $screen-xs-max) {
+    .b-services {
+        &__title {
+            font-size: 36px;
+            font-weight: 300;
+            font-style: normal;
+            text-align: center;
+            color: #333333;
+            margin-top: 30px;
+            min-height: auto;
+            margin-bottom: 8px;
+        }
+        &__desc {}
+        &__items {
+            flex-flow: column nowrap;
+            align-items: center;
+            &__item {
+                margin-bottom: 30px;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+                &__image {}
+                &__name {}
             }
         }
     }
