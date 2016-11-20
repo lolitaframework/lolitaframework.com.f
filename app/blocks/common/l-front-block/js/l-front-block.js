@@ -7,14 +7,13 @@ if (jQuery(window).width() > 767) {
             $here_arrow.addClass('l-front-block__here-arrow--visible');
             $l_front_block.on('mouseenter',
                 function() {
-                    jQuery.cookie('lolitatheme__here-arrow', 'true');
+                    jQuery.cookie('lolitatheme__here-arrow', 'true', { expires: 7 });
                     $here_arrow.addClass('l-front-block__here-arrow--hidden');
                 }
             );
         }
     }
 }
-
 
 jQuery('body').on('w_menu__link__search_click',
     function() {
