@@ -1,4 +1,5 @@
 var $w_search_block = jQuery('.w-search-block');
+var $w_search_block__results = $w_search_block.find('.w-search-block__results');
 var $w_search_block__items = $w_search_block.find('.w-search-block__item');
 var $w_search_block__close = jQuery('.w-search-block__close');
 
@@ -40,17 +41,18 @@ jQuery(document).mouseup(function(e) {
 
 // set next item
 function nextItem() {
+    $w_search_block__items = $w_search_block.find('.w-search-block__item');
     var $next_element = $w_search_block__items.filter('.w-search-block__item--active').next();
     $w_search_block__items.removeClass('w-search-block__item--active');
     if (!$next_element.length) {
         $next_element = $w_search_block__items.first();
-        console.log($next_element);
     }
     $next_element.addClass('w-search-block__item--active');
 }
 
 // set prev item
 function prevItem() {
+    $w_search_block__items = $w_search_block.find('.w-search-block__item');
     var $prev_element = $w_search_block__items.filter('.w-search-block__item--active').prev();
     $w_search_block__items.removeClass('w-search-block__item--active');
     if (!$prev_element.length) {
@@ -60,12 +62,12 @@ function prevItem() {
 }
 
 // bind hover
-$w_search_block__items.hover(function() {
+$w_search_block__results.on('mouseenter', '.w-search-block__item', function() {
+    $w_search_block__items = $w_search_block.find('.w-search-block__item');
     $w_search_block__items.removeClass('w-search-block__item--active');
-    $(this).addClass('w-search-block__item--active');
-}, function() {
-    $w_search_block__items.removeClass('w-search-block__item--active');
+    jQuery(this).addClass('w-search-block__item--active');
 });
+
 
 // arrows binding
 jQuery(document).keydown(function(e) {
