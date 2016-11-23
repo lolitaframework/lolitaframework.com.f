@@ -136,6 +136,16 @@
     }
 }
 
+@media (min-width: $screen-md-min) and (max-width: $screen-lg) {
+    .b-stories {
+        &__items {
+            &__item {
+                width: 300px;
+            }
+        }
+    }
+}
+
 @media (max-width: $screen-xs-max) {
     .b-stories {
         &__title {

@@ -1,0 +1,1 @@
+var current_width=jQuery(window).width(),current_width_type=current_width>=768?"wide":"small";jQuery(window).on("resize",function(){var r=jQuery(window).width(),e=r>=768?"wide":"small";current_width_type!=e&&location.reload()});

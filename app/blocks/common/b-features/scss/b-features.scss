@@ -163,6 +163,16 @@
     }
 }
 
+@media (min-width: $screen-md-min) and (max-width: $screen-lg) {
+    .b-features {
+        &__items {
+            &__item {
+                width: 300px;
+            }
+        }
+    }
+}
+
 @media (max-width: $screen-sm-max) {
     .b-features {
         &__title {
