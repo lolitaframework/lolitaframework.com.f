@@ -248,11 +248,22 @@
     margin-bottom: 0;
     a {
         color: #08C;
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+        }
     }
 }
 
 .comment-form {
     padding-top: 30px;
+    a {
+        color: #08C;
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
     label {
         display: block;
         font-size: 14px;
