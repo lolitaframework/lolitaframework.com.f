@@ -161,6 +161,9 @@
                 width: calc(100vw - 30px);
                 margin-left: 0;
                 margin-right: 0;
+                &__story {
+                    height: 110px;
+                }
             }
         }
     }
