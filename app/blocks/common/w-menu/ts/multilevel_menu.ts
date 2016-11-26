@@ -129,7 +129,7 @@ namespace LolitaFramework {
 
         	// add back button if required
         	if (!$sub_menu.find('li').first().hasClass('back_button')) {
-        		$back_button = jQuery('<li class="w-menu__sub-menu-item back_button"><a class="w-menu__sub-menu-link">Back</a></li>');
+        		$back_button = jQuery('<li class="b-sub-menu-item back_button"><a class="b-sub-menu-link">Back</a></li>');
         		$sub_menu.prepend($back_button);
                 var _this = this;
         		$back_button.on('click', function(e:any) {
@@ -198,5 +198,5 @@ namespace LolitaFramework {
 
     }
 
-    (<any>window).LolitaFramework.multilevel_menu = new MultilevelMenu('.w-menu__container', '.w-menu__sub-menu');
+    (<any>window).LolitaFramework.multilevel_menu = new MultilevelMenu('.w-menu__container', '.b-sub-menu');
 }
