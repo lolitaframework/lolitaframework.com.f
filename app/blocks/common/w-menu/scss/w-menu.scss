@@ -246,6 +246,7 @@
                 width: 100%;
                 border-radius: 2px;
                 margin-bottom: 14px;
+                padding-right: 20px;
                 &.b-sub-menu-item--has_submenu {
                     &:after {
                         @include rotate(-90deg);
