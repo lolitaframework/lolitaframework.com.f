@@ -111,13 +111,23 @@ var LolitaFramework;
             if ($parent_menu == false) {
                 return;
             }
-            if (this.$menu = $parent_menu) {
+            if (this.$menu == $parent_menu) {
                 this.$menu.height('auto');
             }
             else {
                 this.$menu.height($parent_menu.outerHeight());
             }
             $parent_menu.width(this.$menu.outerWidth());
+            var new_z_index = $parent_menu.css('z-index');
+            if (new_z_index == 'auto') {
+                new_z_index = '1';
+            }
+            else {
+                new_z_index = (new_z_index + 1);
+            }
+            $parent_menu.css({
+                'z-index': new_z_index
+            });
             this.$current_menu.animate({ 'left': this.$menu.outerWidth() + 'px' }, 200);
             this.$current_menu = $parent_menu;
         };

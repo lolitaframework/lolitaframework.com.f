@@ -181,13 +181,29 @@ namespace LolitaFramework {
             }
 
             // set container size
-            if (this.$menu = $parent_menu) {
+            if (this.$menu == $parent_menu) {
                 this.$menu.height('auto');     
             } else {
                 this.$menu.height($parent_menu.outerHeight());
             }
        
             $parent_menu.width(this.$menu.outerWidth());
+
+            // set z-index
+            var new_z_index:string = <string>$parent_menu.css('z-index');
+
+            if (new_z_index == 'auto') {
+                new_z_index = '1';
+            } else {
+                new_z_index = <string>(new_z_index + 1);
+            }
+
+            // animate
+            $parent_menu.css(
+                {
+                    'z-index':            new_z_index
+                }
+            );
 
             // animate
             this.$current_menu.animate({'left': this.$menu.outerWidth()+'px'}, 200);
