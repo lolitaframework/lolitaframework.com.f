@@ -177,6 +177,15 @@
                 &:last-child {
                     border-bottom: 0;
                 }
+
+                &:hover > .b-sub-menu {
+                    padding-left: 10px;
+                    &:before {
+                        content: '';
+                        width: 0px;
+                        display: none;
+                    }
+                }
             }
             &-link {
                 display: flex;
